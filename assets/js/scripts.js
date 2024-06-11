@@ -2,7 +2,7 @@ let currentSlide = 0;
 
 // Function to load carousel data from local JSON
 function loadCarouselData() {
-    fetch('../assets/js/localData.json')
+    fetch('./js/localData.json')
         .then(response => response.json())
         .then(data => {
             const slides = data.slides;
