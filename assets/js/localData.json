@@ -1,7 +1,7 @@
 {
     "slides": [
         {
-            "image": "../assets/images/local_news1.jpg",
+            "image": "../images/local_news1.jpg",
             "title": "Example News Article",
             "description": "Highlighted articles will appear here. Click on the title to read more."
         },
