@@ -20,9 +20,8 @@ body {
 header {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
-    padding: 1rem 0; /* 1rem = 16px */
-    min-height: 3.125rem; /* 3.125rem = 50px */
-    border-bottom: 0.1875rem solid #FFD700; /* 0.1875rem = 3px, Gold/Yellow border */
+    padding: 1rem 0; /* Standard padding */
+    border-bottom: 0.1875rem solid #FFD700; /* Gold/Yellow border */
     position: fixed;
     width: 100%;
     top: 0;
@@ -40,12 +39,12 @@ header .slogan {
     font-size: 0.875rem; /* 0.875rem = 14px */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
-    margin: 0.3125rem 0 0.625rem; /* 0.3125rem = 5px, 0.625rem = 10px */
+    margin: 0.3125rem 0 0.625rem; /* Margin adjustments */
 }
 
 header nav {
     text-align: center;
-    margin-top: 0.3125rem; /* 0.3125rem = 5px */
+    margin-top: 0.3125rem; /* Slight top margin */
 }
 
 header nav ul {
@@ -55,18 +54,62 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    padding: 0 0.9375rem; /* 0.9375rem = 15px */
+    padding: 0 0.9375rem; /* Spacing between items */
 }
 
 header nav ul li a {
     color: #FFFFFF; /* White links */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.875rem; /* 0.875rem = 14px */
+    font-size: 0.875rem; /* Consistent font size */
 }
 
 header nav ul li a:hover {
     color: #cccccc; /* Light gray hover effect */
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem; /* 1.5rem = 24px */
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.5rem 0; /* Reduce vertical padding */
+    }
+    header h1 {
+        font-size: 1.5rem; /* Smaller font size for the main title */
+    }
+    header .slogan {
+        display: none; /* Hide slogan to save space */
+    }
+    .menu-toggle {
+        display: block; /* Ensure hamburger menu is visible */
+    }
+    nav {
+        display: none; /* Hide navigation by default */
+        position: absolute;
+        background-color: #003399; /* Matching header color */
+        width: 100%;
+        top: 48px; /* Adjust based on header height */
+    }
+    nav.active {
+        display: block; /* Show when active */
+    }
+    header nav ul {
+        display: block; /* Stack links vertically */
+    }
+    header nav ul li {
+        display: block;
+        padding: 12px 0; /* Larger padding for easier tapping */
+    }
+    header nav ul li a {
+        font-size: 16px; /* Larger font size for better readability */
+    }
 }
 
 section {
@@ -114,7 +157,7 @@ section#about .bio, section#platform .platform-point, section#news .news-article
 }
 
 .carousel-caption {
-    position: absolute;
+    position:absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -229,7 +272,7 @@ footer i.fab {
 }
 
 .social-media li {
-    display: inline;
+    display:inline;
     margin-right: 0.625rem; /* 0.625rem = 10px */
 }
 
@@ -280,103 +323,4 @@ footer i.fab {
 
 .popup-content button:hover {
     background-color: #002266;
-}
-
-/* Hamburger menu toggle button */
-.menu-toggle {
-    display: none; /* Hide by default */
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 1.5rem; /* 1.5rem = 24px */
-    cursor: pointer;
-}
-
-/* Media queries for responsiveness */
-
-/* Mobile devices */
-@media (max-width: 600px) {
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-    }
-
-    nav {
-        display: none; /* Hide nav by default on mobile */
-    }
-
-    nav.active {
-        display: block; /* Show nav when active */
-    }
-
-    header nav ul {
-        display: block; /* Stack menu items vertically */
-        padding: 0;
-    }
-
-    header nav ul li {
-        display: block;
-        padding: 5px 0; /* Adjust padding as needed */
-    }
-
-    header nav ul li a {
-        font-size: 14px; /* Adjust font size as needed */
-    }
-
-    .bio {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bio-left {
-        margin-right: 0;
-        margin-bottom: 0.625rem; /* 0.625rem = 10px */
-    }
-
-    .carousel {
-        height: 12.5rem; /* 12.5rem = 200px */
-    }
-
-    .carousel-caption {
-        width: 90%;
-        padding: 0.3125rem; /* 0.3125rem = 5px */
-    }
-
-    .carousel-control {
-        font-size: 1.25rem; /* 1.25rem = 20px */
-    }
-
-    form label, form input[type="submit"] {
-        width: 100%;
-    }
-
-    footer {
-        padding: 1.25rem 0.625rem; /* 1.25rem = 20px, 0.625rem = 10px */
-    }
-}
-
-/* Tablets and small desktops */
-@media (min-width: 37.5625rem) and (max-width: 64rem) { /* 37.5625rem = 601px, 64rem = 1024px */
-    .container {
-        width: 90%;
-    }
-
-    header h1 {
-        font-size: 2rem; /* 2rem = 32px */
-    }
-
-    header .slogan {
-        font-size: 0.9rem; /* 0.9rem = 14.4px */
-    }
-
-    .carousel {
-        height: 18.75rem; /* 18.75rem = 300px */
-    }
-
-    .carousel-caption {
-        width: 85%;
-    }
-
-    .carousel-control {
-        font-size: 1.375rem; /* 1.375rem = 22px */
-    }
 }
