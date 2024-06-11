@@ -282,40 +282,26 @@ footer i.fab {
     background-color: #002266;
 }
 
+/* Hamburger menu toggle button */
+.menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem; /* 1.5rem = 24px */
+    cursor: pointer;
+}
+
 /* Media queries for responsiveness */
 
 /* Mobile devices */
-@media (max-width: 37.5rem) { /* 37.5rem = 600px */
-    .container {
-        width: 100%;
-        padding: 0 0.625rem; /* 0.625rem = 10px */
-    }
-
-    header {
-        padding: 0.625rem 0; /* 0.625rem = 10px */
-    }
-
-    header h1 {
-        font-size: 1.5rem; /* 1.5rem = 24px */
-    }
-
-    header .slogan {
-        font-size: 0.875rem; /* 0.875rem = 14px */
-    }
-
+@media (max-width: 600px) {
     .menu-toggle {
-        display: block; /* Show toggle button */
-        background: none;
-        border: none;
-        color: #FFFFFF;
-        font-size: 1.5rem; /* 1.5rem = 24px */
-        cursor: pointer;
-        margin: 0;
-        padding: 0;
+        display: block; /* Show toggle button on mobile */
     }
 
     nav {
-        display: none; /* Hide nav by default */
+        display: none; /* Hide nav by default on mobile */
     }
 
     nav.active {
@@ -329,11 +315,11 @@ footer i.fab {
 
     header nav ul li {
         display: block;
-        padding: 0.3125rem 0; /* 0.3125rem = 5px */
+        padding: 5px 0; /* Adjust padding as needed */
     }
 
     header nav ul li a {
-        font-size: 0.875rem; /* 0.875rem = 14px */
+        font-size: 14px; /* Adjust font size as needed */
     }
 
     .bio {
