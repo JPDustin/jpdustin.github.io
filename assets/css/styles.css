@@ -241,3 +241,42 @@ footer i.fab {
 .social-media a:hover {
     color: #002266; /* Darker blue */
 }
+
+/* Popup container */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Button inside the popup */
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #003399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #002266;
+}
