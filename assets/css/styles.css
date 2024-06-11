@@ -280,3 +280,92 @@ footer i.fab {
 .popup-content button:hover {
     background-color: #002266;
 }
+
+/* Media queries for responsiveness */
+
+/* Mobile devices */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header .slogan {
+        font-size: 0.8em;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .bio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-left {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .carousel {
+        height: 200px;
+    }
+
+    .carousel-caption {
+        width: 90%;
+        padding: 5px;
+    }
+
+    .carousel-control {
+        font-size: 20px;
+    }
+
+    form label, form input[type="submit"] {
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header .slogan {
+        font-size: 0.9em;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+
+    .carousel-caption {
+        width: 85%;
+    }
+
+    .carousel-control {
+        font-size: 22px;
+    }
+}
