@@ -1,13 +1,14 @@
+html {
+    font-size: 16px; /* This makes 1rem equal to 16px */
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #FFFFFF; /* White background */
     color: #333333; /* Dark gray text */
-}
-
-html {
-    overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
 }
 
 .container {
@@ -19,9 +20,9 @@ html {
 header {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
-    padding: 30px 0;
-    min-height: 70px;
-    border-bottom: #FFD700 3px solid; /* Gold/Yellow border */
+    padding: 1rem 0; /* 1rem = 16px */
+    min-height: 3.125rem; /* 3.125rem = 50px */
+    border-bottom: 0.1875rem solid #FFD700; /* 0.1875rem = 3px, Gold/Yellow border */
     position: fixed;
     width: 100%;
     top: 0;
@@ -31,20 +32,20 @@ header {
 header h1 {
     margin: 0;
     text-align: left;
-    font-size: 2.5em;
+    font-size: 2rem; /* 2rem = 32px */
 }
 
 header .slogan {
     text-align: left;
-    font-size: 1em;
+    font-size: 0.875rem; /* 0.875rem = 14px */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
-    margin: 5px 0 20px;
+    margin: 0.3125rem 0 0.625rem; /* 0.3125rem = 5px, 0.625rem = 10px */
 }
 
 header nav {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.3125rem; /* 0.3125rem = 5px */
 }
 
 header nav ul {
@@ -54,14 +55,14 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    padding: 0 20px;
+    padding: 0 0.9375rem; /* 0.9375rem = 15px */
 }
 
 header nav ul li a {
     color: #FFFFFF; /* White links */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 0.875rem; /* 0.875rem = 14px */
 }
 
 header nav ul li a:hover {
@@ -69,8 +70,8 @@ header nav ul li a:hover {
 }
 
 section {
-    padding: 20px;
-    margin-top: 150px; /* Adjust this value to create space for the fixed header */
+    padding: 1.25rem; /* 1.25rem = 20px */
+    margin-top: 9.375rem; /* 9.375rem = 150px */
 }
 
 section#home {
@@ -78,15 +79,15 @@ section#home {
 }
 
 section#about .bio, section#platform .platform-point, section#news .news-article, section#events .event {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    border-bottom: 0.0625rem solid #ddd; /* 0.0625rem = 1px */
+    margin-bottom: 1.25rem; /* 1.25rem = 20px */
+    padding-bottom: 0.625rem; /* 0.625rem = 10px */
 }
 
 .carousel {
     position: relative;
     max-width: 100%;
-    height: 400px; /* Set a fixed height for the carousel */
+    height: 25rem; /* 25rem = 400px */
     margin: auto;
     overflow: hidden;
     background-color: #f4f4f4; /* Optional: add a background color */
@@ -120,8 +121,8 @@ section#about .bio, section#platform .platform-point, section#news .news-article
     color: #FFFFFF;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
+    padding: 0.625rem; /* 0.625rem = 10px */
+    border-radius: 0.3125rem; /* 0.3125rem = 5px */
     width: 80%;
 }
 
@@ -129,37 +130,37 @@ section#about .bio, section#platform .platform-point, section#news .news-article
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 24px;
+    font-size: 1.5rem; /* 1.5rem = 24px */
     color: #FFFFFF;
     background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    padding: 0.625rem; /* 0.625rem = 10px */
     cursor: pointer;
     border-radius: 50%;
 }
 
 .carousel-control.prev {
-    left: 10px;
+    left: 0.625rem; /* 0.625rem = 10px */
 }
 
 .carousel-control.next {
-    right: 10px;
+    right: 0.625rem; /* 0.625rem = 10px */
 }
 
 form label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 0.625rem 0 0.3125rem; /* 0.625rem = 10px, 0.3125rem = 5px */
 }
 
 form input[type="text"], form input[type="email"], form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 0.625rem; /* 0.625rem = 10px */
+    margin-bottom: 0.625rem; /* 0.625rem = 10px */
 }
 
 form input[type="submit"] {
     background: #003399; /* Blue button */
     color: #FFFFFF; /* White text */
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem; /* 0.625rem = 10px, 0.9375rem = 15px */
     border: none;
     cursor: pointer;
 }
@@ -172,12 +173,12 @@ footer {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 0.625rem; /* 0.625rem = 10px */
+    margin-top: 1.25rem; /* 1.25rem = 20px */
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0.3125rem 0; /* 0.3125rem = 5px */
 }
 
 footer a {
@@ -190,30 +191,30 @@ footer a:hover {
 }
 
 footer i.fab {
-    margin-left: 5px;
+    margin-left: 0.3125rem; /* 0.3125rem = 5px */
 }
 
 .bio {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
-    max-width: 800px;
+    margin-bottom: 1.25rem; /* 1.25rem = 20px */
+    max-width: 50rem; /* 50rem = 800px */
 }
 
 .bio-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1.25rem; /* 1.25rem = 20px */
     flex-shrink: 0;
 }
 
 .bio-left h3 {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; /* 0.625rem = 10px */
 }
 
 .bio-left img {
-    width: 150px;
+    width: 9.375rem; /* 9.375rem = 150px */
     height: auto;
     border-radius: 50%;
 }
@@ -229,13 +230,13 @@ footer i.fab {
 
 .social-media li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 0.625rem; /* 0.625rem = 10px */
 }
 
 .social-media a {
     color: #003399; /* Blue */
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem; /* 1.2rem = 19.2px */
 }
 
 .social-media a:hover {
@@ -258,22 +259,22 @@ footer i.fab {
 .popup-content {
     position: relative;
     margin: 15% auto;
-    padding: 20px;
+    padding: 1.25rem; /* 1.25rem = 20px */
     width: 80%;
-    max-width: 600px;
+    max-width: 37.5rem; /* 37.5rem = 600px */
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 0.625rem; /* 0.625rem = 10px */
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3); /* 0.3125rem = 5px, 0.9375rem = 15px */
     text-align: center;
 }
 
 /* Button inside the popup */
 .popup-content button {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem; /* 0.625rem = 10px, 1.25rem = 20px */
     background-color: #003399;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem; /* 0.3125rem = 5px */
     cursor: pointer;
 }
 
@@ -284,31 +285,55 @@ footer i.fab {
 /* Media queries for responsiveness */
 
 /* Mobile devices */
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) { /* 37.5rem = 600px */
     .container {
         width: 100%;
-        padding: 0 10px;
+        padding: 0 0.625rem; /* 0.625rem = 10px */
     }
 
     header {
-        padding: 15px 0;
+        padding: 0.625rem 0; /* 0.625rem = 10px */
     }
 
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.5rem; /* 1.5rem = 24px */
     }
 
     header .slogan {
-        font-size: 0.8em;
+        font-size: 0.875rem; /* 0.875rem = 14px */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button */
+        background: none;
+        border: none;
+        color: #FFFFFF;
+        font-size: 1.5rem; /* 1.5rem = 24px */
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: none; /* Hide nav by default */
+    }
+
+    nav.active {
+        display: block; /* Show nav when active */
+    }
+
+    header nav ul {
+        display: block; /* Stack menu items vertically */
+        padding: 0;
     }
 
     header nav ul li {
         display: block;
-        padding: 10px 0;
+        padding: 0.3125rem 0; /* 0.3125rem = 5px */
     }
 
     header nav ul li a {
-        font-size: 14px;
+        font-size: 0.875rem; /* 0.875rem = 14px */
     }
 
     .bio {
@@ -318,20 +343,20 @@ footer i.fab {
 
     .bio-left {
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem; /* 0.625rem = 10px */
     }
 
     .carousel {
-        height: 200px;
+        height: 12.5rem; /* 12.5rem = 200px */
     }
 
     .carousel-caption {
         width: 90%;
-        padding: 5px;
+        padding: 0.3125rem; /* 0.3125rem = 5px */
     }
 
     .carousel-control {
-        font-size: 20px;
+        font-size: 1.25rem; /* 1.25rem = 20px */
     }
 
     form label, form input[type="submit"] {
@@ -339,26 +364,26 @@ footer i.fab {
     }
 
     footer {
-        padding: 20px 10px;
+        padding: 1.25rem 0.625rem; /* 1.25rem = 20px, 0.625rem = 10px */
     }
 }
 
 /* Tablets and small desktops */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 37.5625rem) and (max-width: 64rem) { /* 37.5625rem = 601px, 64rem = 1024px */
     .container {
         width: 90%;
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 2rem; /* 2rem = 32px */
     }
 
     header .slogan {
-        font-size: 0.9em;
+        font-size: 0.9rem; /* 0.9rem = 14.4px */
     }
 
     .carousel {
-        height: 300px;
+        height: 18.75rem; /* 18.75rem = 300px */
     }
 
     .carousel-caption {
@@ -366,6 +391,6 @@ footer i.fab {
     }
 
     .carousel-control {
-        font-size: 22px;
+        font-size: 1.375rem; /* 1.375rem = 22px */
     }
 }
