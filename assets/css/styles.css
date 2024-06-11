@@ -75,38 +75,36 @@ header nav ul li a:hover {
     color: #FFFFFF;
     font-size: 1.5rem; /* 1.5rem = 24px */
     cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 @media (max-width: 600px) {
-    header {
-        padding: 0.5rem 0; /* Reduce vertical padding */
-    }
-    header h1 {
-        font-size: 1.5rem; /* Smaller font size for the main title */
-    }
-    
     .menu-toggle {
-        display: block; /* Ensure hamburger menu is visible */
+        display: block; /* Show toggle button on mobile */
     }
-    nav {
-        display: none; /* Hide navigation by default */
-        position: absolute;
-        background-color: #003399; /* Matching header color */
-        width: 100%;
-        top: 48px; /* Adjust based on header height */
+
+    nav ul {
+        display: none; /* Hide nav items by default on mobile */
     }
-    nav.active {
-        display: block; /* Show when active */
+
+    nav.active ul {
+        display: block; /* Show nav items when active */
     }
+
     header nav ul {
-        display: block; /* Stack links vertically */
+        display: block; /* Stack menu items vertically */
+        padding: 0;
     }
+
     header nav ul li {
         display: block;
-        padding: 12px 0; /* Larger padding for easier tapping */
+        padding: 5px 0; /* Adjust padding as needed */
     }
+
     header nav ul li a {
-        font-size: 16px; /* Larger font size for better readability */
+        font-size: 14px; /* Adjust font size as needed */
     }
 }
 
