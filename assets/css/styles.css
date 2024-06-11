@@ -1,3 +1,4 @@
+/* General styles */
 html {
     font-size: 16px; /* This makes 1rem equal to 16px */
     overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
@@ -20,8 +21,9 @@ body {
 header {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
-    padding: 1rem 0; /* Standard padding */
-    border-bottom: 0.1875rem solid #FFD700; /* Gold/Yellow border */
+    padding: 1rem 0; /* 1rem = 16px */
+    min-height: 3.125rem; /* 3.125rem = 50px */
+    border-bottom: 0.1875rem solid #FFD700; /* 0.1875rem = 3px, Gold/Yellow border */
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,12 +41,12 @@ header .slogan {
     font-size: 0.875rem; /* 0.875rem = 14px */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
-    margin: 0.3125rem 0 0.625rem; /* Margin adjustments */
+    margin: 0.3125rem 0 0.625rem; /* 0.3125rem = 5px, 0.625rem = 10px */
 }
 
 header nav {
     text-align: center;
-    margin-top: 0.3125rem; /* Slight top margin */
+    margin-top: 0.3125rem; /* 0.3125rem = 5px */
 }
 
 header nav ul {
@@ -54,58 +56,18 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    padding: 0 0.9375rem; /* Spacing between items */
+    padding: 0 0.9375rem; /* 0.9375rem = 15px */
 }
 
 header nav ul li a {
     color: #FFFFFF; /* White links */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.875rem; /* Consistent font size */
+    font-size: 0.875rem; /* 0.875rem = 14px */
 }
 
 header nav ul li a:hover {
     color: #cccccc; /* Light gray hover effect */
-}
-
-.menu-toggle {
-    display: none; /* Hide by default */
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    font-size: 1.5rem; /* 1.5rem = 24px */
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-@media (max-width: 600px) {
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-    }
-
-    nav ul {
-        display: none; /* Hide nav items by default on mobile */
-    }
-
-    nav.active ul {
-        display: block; /* Show nav items when active */
-    }
-
-    header nav ul {
-        display: block; /* Stack menu items vertically */
-        padding: 0;
-    }
-
-    header nav ul li {
-        display: block;
-        padding: 5px 0; /* Adjust padding as needed */
-    }
-
-    header nav ul li a {
-        font-size: 14px; /* Adjust font size as needed */
-    }
 }
 
 section {
@@ -153,7 +115,7 @@ section#about .bio, section#platform .platform-point, section#news .news-article
 }
 
 .carousel-caption {
-    position:absolute;
+    position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -268,7 +230,7 @@ footer i.fab {
 }
 
 .social-media li {
-    display:inline;
+    display: inline;
     margin-right: 0.625rem; /* 0.625rem = 10px */
 }
 
@@ -319,4 +281,48 @@ footer i.fab {
 
 .popup-content button:hover {
     background-color: #002266;
+}
+
+/* Hamburger menu toggle button */
+.menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem; /* 1.5rem = 24px */
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Media queries for responsiveness */
+
+/* Mobile devices */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide nav items by default on mobile */
+    }
+
+    nav.active ul {
+        display: block; /* Show nav items when active */
+    }
+
+    header nav ul {
+        display: block; /* Stack menu items vertically */
+        padding: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 5px 0; /* Adjust padding as needed */
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Adjust font size as needed */
+    }
 }
