@@ -6,6 +6,10 @@ body {
     color: #333333; /* Dark gray text */
 }
 
+html {
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
+}
+
 .container {
     width: 80%;
     margin: auto;
