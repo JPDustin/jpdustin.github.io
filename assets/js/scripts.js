@@ -8,13 +8,14 @@ function loadCarouselData() {
             const slides = data.slides;
             const carouselInner = document.getElementById('carousel-inner');
 
+            // Create each slide dynamically based on the JSON data
             slides.forEach((slide, index) => {
                 const slideElement = document.createElement('div');
                 slideElement.className = `carousel-item${index === 0 ? ' active' : ''}`;
                 slideElement.innerHTML = `
                     <img src="${slide.image}" alt="${slide.title}">
                     <div class="carousel-caption">
-                        <h3>${slide.title}</h3>
+                        <h3><a href="${slide.url}" target="_blank">${slide.title}</a></h3>
                         <p>${slide.description}</p>
                     </div>
                 `;
@@ -26,6 +27,7 @@ function loadCarouselData() {
         .catch(error => console.error('Error loading carousel data:', error));
 }
 
+// Function to display a specific slide
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-item');
     const totalSlides = slides.length;
@@ -35,6 +37,7 @@ function showSlide(index) {
     });
 }
 
+// Function to move between slides
 function moveSlide(step) {
     const slides = document.querySelectorAll('.carousel-item');
     currentSlide = (currentSlide + step + slides.length) % slides.length;
@@ -42,4 +45,4 @@ function moveSlide(step) {
 }
 
 // Initialize the carousel by loading data
-loadCarouselData();
+document.addEventListener('DOMContentLoaded', loadCarouselData);
