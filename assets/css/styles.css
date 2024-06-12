@@ -309,7 +309,7 @@ footer i.fab {
         display: block; /* Show toggle button on mobile */
     }
 
-    nav {
+    nav ul {
         display: none; /* Hide nav by default on mobile */
         position: absolute;
         background-color: #003399; /* Matching header color */
@@ -319,7 +319,7 @@ footer i.fab {
         z-index: 999;
     }
 
-    nav.active {
+    nav ul.active {
         display: block; /* Show nav when active */
     }
 
