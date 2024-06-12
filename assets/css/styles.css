@@ -30,6 +30,10 @@ header {
     z-index: 1000;
 }
 
+header .logo {
+    height: 50px; /* Adjust size as needed */
+}
+
 header h1 {
     margin: 0;
     text-align: left;
