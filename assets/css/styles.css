@@ -300,31 +300,36 @@ footer i.fab {
 /* Media queries for responsiveness */
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .menu-toggle {
         display: block; /* Show toggle button on mobile */
     }
 
-    nav ul {
-        display: none; /* Hide nav items by default on mobile */
+    nav {
+        display: none; /* Hide nav by default on mobile */
+        position: absolute;
+        background-color: #003399; /* Matching header color */
+        width: 100%;
+        top: 48px; /* Adjust based on header height */
+        left: 0;
+        z-index: 999;
     }
 
-    nav.active ul {
-        display: block; /* Show nav items when active */
+    nav.active {
+        display: block; /* Show nav when active */
     }
 
     header nav ul {
-        display: block; /* Stack menu items vertically */
-        padding: 0;
+        display: block; /* Stack menu items vertically on mobile */
     }
 
     header nav ul li {
         display: block;
-        padding: 5px 0; /* Adjust padding as needed */
+        padding: 12px 0; /* Larger padding for easier tapping */
     }
 
     header nav ul li a {
-        font-size: 14px; /* Adjust font size as needed */
+        font-size: 16px; /* Larger font size for better readability on mobile */
     }
 
     .container {
