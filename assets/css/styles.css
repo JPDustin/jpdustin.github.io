@@ -298,8 +298,8 @@ footer i.fab {
 
 /* Media queries for responsiveness */
 
-/* Mobile devices */
-@media (max-width: 600px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     .menu-toggle {
         display: block; /* Show toggle button on mobile */
     }
@@ -324,5 +324,42 @@ footer i.fab {
 
     header nav ul li a {
         font-size: 14px; /* Adjust font size as needed */
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .menu-toggle {
+        display: none; /* Hide toggle button on larger screens */
+    }
+
+    nav ul {
+        display: flex; /* Show nav items on larger screens */
+    }
+
+    header nav ul li {
+        display: inline-block;
+        padding: 0 15px; /* Adjust padding as needed */
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 85%; /* Adjust container width */
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 80%; /* Adjust container width */
     }
 }
