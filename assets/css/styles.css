@@ -364,17 +364,3 @@ footer i.fab {
         width: 90%; /* Adjust container width */
     }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .container {
-        width: 85%; /* Adjust container width */
-    }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .container {
-        width: 80%; /* Adjust container width */
-    }
-}
