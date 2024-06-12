@@ -46,7 +46,7 @@ header .slogan {
 
 header nav {
     text-align: center;
-    margin-top: 0.3125rem; /* 0.3125rem = 5px */
+    margin-top: 0.3125rem; /* Slight top margin */
 }
 
 header nav ul {
@@ -55,15 +55,15 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
-    padding: 0 0.9375rem; /* 0.9375rem = 15px */
+    display: inline; /* Inline display for large screens */
+    padding: 0 0.9375rem; /* Spacing between items */
 }
 
 header nav ul li a {
     color: #FFFFFF; /* White links */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.875rem; /* 0.875rem = 14px */
+    font-size: 0.875rem; /* Consistent font size */
 }
 
 header nav ul li a:hover {
@@ -286,15 +286,12 @@ footer i.fab {
 
 /* Hamburger menu toggle button */
 .menu-toggle {
-    display: none; /* Hide by default */
+    display: none; /* Hide by default, shown only on mobile */
     background: none;
     border: none;
     color: #FFFFFF;
     font-size: 1.5rem; /* 1.5rem = 24px */
     cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
 }
 
 /* Media queries for responsiveness */
