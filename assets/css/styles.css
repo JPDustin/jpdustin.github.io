@@ -156,6 +156,7 @@ form input[type="text"], form input[type="email"], form textarea {
     width: 100%;
     padding: 0.625rem; /* 0.625rem = 10px */
     margin-bottom: 0.625rem; /* 0.625rem = 10px */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall width */
 }
 
 form input[type="submit"] {
@@ -324,6 +325,15 @@ footer i.fab {
 
     header nav ul li a {
         font-size: 14px; /* Adjust font size as needed */
+    }
+
+    .container {
+        width: 100%; /* Ensure container takes full width */
+        padding: 0 10px; /* Add some padding */
+    }
+
+    form input[type="text"], form input[type="email"], form textarea {
+        width: 100%;
     }
 }
 
