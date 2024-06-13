@@ -193,9 +193,15 @@ form input[type="submit"]:hover {
 
 #survey {
     padding: 1.25rem; /* 1.25rem = 20px */
-    background-color: #f4f4f4; /* Light gray background */
-    text-align: center;
     margin-top: 1.25rem; /* 1.25rem = 20px */
+}
+
+#survey .survey-box {
+    background-color: #f4f4f4; /* Light gray background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 0.3125rem; /* 0.3125rem = 5px */
+    padding: 1.25rem; /* 1.25rem = 20px */
+    text-align: center;
 }
 
 #survey h2 {
@@ -391,10 +397,6 @@ footer i.fab {
     .container {
         width: 100%; /* Ensure container takes full width */
         padding: 0 10px; /* Add some padding */
-    }
-
-    form input[type="text"], form input[type="email"], form textarea {
-        width: 100%;
     }
 }
 
