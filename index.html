@@ -96,26 +96,28 @@
     <script src="./assets/js/popup.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script>
-        document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
 
-            var form = event.target;
-            var data = new FormData(form);
+                var form = event.target;
+                var data = new FormData(form);
 
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', form.action, true);
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', form.action, true);
 
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // Show success message
-                    document.getElementById('successMessage').style.display = 'block';
-                    
-                    // Clear the form
-                    form.reset();
-                }
-            };
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // Show success message
+                        document.getElementById('successMessage').style.display = 'block';
+                        
+                        // Clear the form
+                        form.reset();
+                    }
+                };
 
-            xhr.send(data);
+                xhr.send(data);
+            });
         });
     </script>
 </body>
