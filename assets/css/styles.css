@@ -36,9 +36,14 @@ header .container {
     justify-content: space-between;
 }
 
+header .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
 header .logo {
     height: 50px; /* Adjust size as needed */
-    margin-right: 1rem; /* Add some space between the logo and the text */
 }
 
 header .header-text {
@@ -357,7 +362,6 @@ footer i.fab {
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .menu-toggle {
         display: none; /* Hide toggle button on larger screens */
@@ -373,7 +377,6 @@ footer i.fab {
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .container {
         width: 90%; /* Adjust container width */
