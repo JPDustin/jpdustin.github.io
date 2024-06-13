@@ -34,7 +34,7 @@
             <p>There are many ways you can get involved and support our campaign:</p>
             <h3>Volunteer</h3>
             <p>We need volunteers to help with various tasks such as canvassing, phone banking, event setup, and more. Fill out the form below to let us know how you can help.</p>
-            <form>
+            <form id="getInvolvedForm" action="https://script.google.com/macros/s/AKfycbxwD9SVyoS9t3ovezQtNSz7KFiiVDVHJV5OHN_5mfrewWNveWOq-mZjKwrrrOJQvthSew/exec" method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email</label>
@@ -43,6 +43,7 @@
                 <textarea id="message" name="message" required></textarea>
                 <input type="submit" value="Submit">
             </form>
+            <div id="successMessage" style="display:none; color:green;">Thank you for getting involved! Your message has been sent successfully.</div>
             <h3>Donate</h3>
             <p>Your donations are crucial to our campaign. <a href="contact.html">Contact us</a> to request information on how you can donate. </p>
             <h3>Spread the Word</h3>
@@ -60,5 +61,28 @@
         </div>
     </footer>
     <script src="../assets/js/menu.js"></script>
+    <script>
+        document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target;
+            var data = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Show success message
+                    document.getElementById('successMessage').style.display = 'block';
+                    
+                    // Clear the form
+                    form.reset();
+                }
+            };
+
+            xhr.send(data);
+        });
+    </script>
 </body>
 </html>
