@@ -1,3 +1,9 @@
+/* General styles */
+html {
+    font-size: 16px; /* This makes 1rem equal to 16px */
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,32 +21,52 @@ body {
 header {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
-    padding: 30px 0;
-    min-height: 70px;
-    border-bottom: #FFD700 3px solid; /* Gold/Yellow border */
+    padding: 1rem 0; /* 1rem = 16px */
+    min-height: 3.125rem; /* 3.125rem = 50px */
+    border-bottom: 0.1875rem solid #FFD700; /* 0.1875rem = 3px, Gold/Yellow border */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+header .logo {
+    height: 70px; /* Default size for larger screens */
+}
+
+header .header-text {
+    flex-grow: 1;
+}
+
 header h1 {
     margin: 0;
     text-align: left;
-    font-size: 2.5em;
+    font-size: 2rem; /* 2rem = 32px */
 }
 
 header .slogan {
     text-align: left;
-    font-size: 1em;
+    font-size: 0.875rem; /* 0.875rem = 14px */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
-    margin: 5px 0 20px;
+    margin: 0.3125rem 0 0.625rem; /* 0.3125rem = 5px, 0.625rem = 10px */
 }
 
 header nav {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.3125rem; /* 0.3125rem = 5px */
 }
 
 header nav ul {
@@ -50,190 +76,92 @@ header nav ul {
 
 header nav ul li {
     display: inline;
-    padding: 0 20px;
+    padding: 0 0.9375rem; /* 0.9375rem = 15px */
 }
 
 header nav ul li a {
     color: #FFFFFF; /* White links */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 0.875rem; /* 0.875rem = 14px */
 }
 
 header nav ul li a:hover {
     color: #cccccc; /* Light gray hover effect */
 }
 
-section {
-    padding: 20px;
-    margin-top: 150px; /* Adjust this value to create space for the fixed header */
-}
-
-section#home {
-    background: #f4f4f4;
-}
-
-section#about .bio, section#platform .platform-point, section#news .news-article, section#events .event {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-}
-
-.carousel {
-    position: relative;
-    max-width: 100%;
-    height: 400px; /* Set a fixed height for the carousel */
-    margin: auto;
-    overflow: hidden;
-    background-color: #f4f4f4; /* Optional: add a background color */
-}
-
-.carousel-inner {
-    display: flex;
-    height: 100%;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    height: 100%;
-}
-
-.carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure images cover the entire carousel area */
-    vertical-align: middle;
-}
-
-.carousel-caption {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #FFFFFF;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    width: 80%;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #FFFFFF;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.carousel-control.prev {
-    left: 10px;
-}
-
-.carousel-control.next {
-    right: 10px;
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input[type="text"], form input[type="email"], form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-form input[type="submit"] {
-    background: #003399; /* Blue button */
-    color: #FFFFFF; /* White text */
-    padding: 10px 15px;
+.menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
     border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem; /* 1.5rem = 24px */
     cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
-form input[type="submit"]:hover {
-    background: #002266; /* Darker blue button */
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    header .logo {
+        height: 50px; /* Smaller size for mobile devices */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    nav {
+        display: none; /* Hide nav by default on mobile */
+        position: absolute;
+        background-color: #003399; /* Matching header color */
+        width: 100%;
+        top: 48px; /* Adjust based on header height */
+        left: 0;
+        z-index: 999;
+    }
+
+    nav.active {
+        display: block; /* Show nav when active */
+    }
+
+    header nav ul {
+        display: block; /* Stack menu items vertically on mobile */
+    }
+
+    header nav ul li {
+        display: block;
+        padding: 12px 0; /* Larger padding for easier tapping */
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Larger font size for better readability on mobile */
+    }
+
+    .container {
+        width: 100%; /* Ensure container takes full width */
+        padding: 0 10px; /* Add some padding */
+    }
 }
 
-footer {
-    background: #003399; /* Blue background */
-    color: #FFFFFF; /* White text */
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+@media only screen and (min-width: 600px) {
+    .menu-toggle {
+        display: none; /* Hide toggle button on larger screens */
+    }
+
+    nav ul {
+        display: flex; /* Show nav items on larger screens */
+    }
+
+    header nav ul li {
+        display: inline-block;
+        padding: 0 15px; /* Adjust padding as needed */
+    }
 }
 
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #FFD700; /* Gold/Yellow link */
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #FFFFFF; /* White text on hover */
-}
-
-footer i.fab {
-    margin-left: 5px;
-}
-
-.bio {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    max-width: 800px;
-}
-
-.bio-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-    flex-shrink: 0;
-}
-
-.bio-left h3 {
-    margin-bottom: 10px;
-}
-
-.bio-left img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.bio p {
-    flex-grow: 1;
-}
-
-.social-media {
-    list-style: none;
-    padding: 0;
-}
-
-.social-media li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.social-media a {
-    color: #003399; /* Blue */
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.social-media a:hover {
-    color: #002266; /* Darker blue */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width */
+    }
 }
