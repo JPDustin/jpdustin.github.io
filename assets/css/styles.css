@@ -107,6 +107,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
     border-bottom: 1px solid #ddd; /* 1px = 0.0625rem */
     margin-bottom: 20px; /* 20px = 1.25rem */
     padding-bottom: 10px; /* 10px = 0.625rem */
+    text-align: center;
 }
 
 .carousel {
