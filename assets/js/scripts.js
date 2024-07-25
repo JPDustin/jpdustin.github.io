@@ -29,10 +29,12 @@ function loadCarouselData() {
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-
     slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
+        if (i === index) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
     });
 }
 
