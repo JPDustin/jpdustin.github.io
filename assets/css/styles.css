@@ -323,57 +323,57 @@ ol li {
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
     .menu-toggle {
-        display: block;
+        display: block; /* Show hamburger menu on mobile */
     }
 
     nav ul {
-        display: none;
+        display: none; /* Hide navigation links initially on mobile */
         position: absolute;
-        background-color: #003399;
+        background-color: #003399; /* Header's background color */
         width: 100%;
-        top: 70px;
+        top: 70px; /* Adjust as per header height */
         left: 0;
         z-index: 999;
     }
 
     nav ul.active {
-        display: block;
+        display: block; /* Display menu when active (toggled) */
     }
 
     header nav ul {
-        display: block;
+        display: block; /* Ensure nav is block on mobile */
     }
 
     header nav ul li {
-        display: block;
-        padding: 12px 0;
+        display: block; /* Stack links vertically on mobile */
+        padding: 12px 0; /* Adjust padding for touch accessibility */
     }
 
     header nav ul li a {
-        font-size: 16px;
+        font-size: 16px; /* Increase font size for better readability on mobile */
     }
 
     .container {
-        width: 100%;
-        padding: 0 10px;
+        width: 100%; /* Full width containers on small screens */
+        padding: 0 10px; /* Adjust padding */
     }
 
     form input[type="text"], form input[type="email"], form textarea {
-        width: 100%;
+        width: 100%; /* Full width form elements on mobile */
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media (min-width: 601px) {
     .menu-toggle {
-        display: none;
+        display: none; /* Hide hamburger menu on desktop */
     }
 
     nav ul {
-        display: flex;
+        display: flex; /* Use flexbox for horizontal alignment of links */
     }
 
     header nav ul li {
-        display: inline-block;
-        padding: 0 15px;
+        display: inline-block; /* Display links inline on desktop */
+        padding: 0 15px; /* Spacing between links */
     }
 }
