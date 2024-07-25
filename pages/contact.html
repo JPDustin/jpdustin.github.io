@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Powerslate</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="title-slogan">
+                <h1>633 Teamsters Power Slate</h1>
+                <p class="slogan">"Bringing power back to the members"</p>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger">&#9776;</span> <!-- Unicode for hamburger icon -->
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pages/about.html">About Us</a></li>
+                    <li><a href="/pages/platform.html">Our Platform</a></li>
+                    <li><a href="/pages/news.html">News</a></li>
+                    <li><a href="/pages/events.html">Events</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you. Reach out to us with any questions or comments.</p>
+            <form id="contactForm" action="https://script.google.com/macros/s/AKfycbwIt8_0Zo9CYon0YOrQATd6MsnW73oUOLbxt2DlqYlPCiyBQMwfgZWhOo0ENk7zCUIB/exec" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <input type="submit" value="Submit">
+            </form>
+            <div id="formConfirmation" style="display:none;">Thank you for your submission!</div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Powerslate. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+        </div>
+    </footer>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        var form = event.target;
+        var data = new FormData(form);
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: data
+        }).then(function(response) {
+            if (response.ok) {
+                // Hide the form and show the confirmation message
+                form.style.display = 'none';
+                document.getElementById('formConfirmation').style.display = 'block';
+            } else {
+                alert('There was a problem with the submission. Please try again.');
+            }
+        }).catch(function(error) {
+            console.error('Error!', error.message);
+            alert('There was a problem with the submission. Please try again.');
+        });
+    });
+    </script>
+    <script src="../assets/js/menu.js"></script>
+</body>
+</html>

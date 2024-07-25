@@ -1,0 +1,380 @@
+/* General styles */
+html {
+    font-size: 16px; /* This makes 1rem equal to 16px */
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark gray text */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 1rem; /* Add padding for better spacing */
+}
+
+header {
+    background: #003399; /* Blue background */
+    color: #FFFFFF; /* White text */
+    padding: 10px 20px; /* Adjusted padding */
+    border-bottom: 3px solid #FFD700; /* Gold/Yellow border */
+    position: fixed;
+    width: 100%; /* Ensure the header is full width */
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    justify-content: space-between; /* Space between items properly */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Align content from the start */
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width for better control */
+    margin: 0 auto; /* Center the container */
+}
+
+header .title-slogan {
+    display: flex;
+    flex-direction: column; /* Stack h1 and slogan vertically */
+    align-items: flex-start; /* Align items to the start */
+    flex-grow: 1; /* Allow it to take up available space */
+}
+
+header h1 {
+    margin: 0; /* Remove margin to handle spacing tightly */
+    font-size: 2rem; /* 2rem = 32px */
+    white-space: nowrap; /* Prevent h1 from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+}
+
+header .slogan {
+    font-size: 0.875rem; /* Adjust font size */
+    font-style: italic;
+    color: #FFD700; /* Gold/Yellow text */
+    margin-top: 0px;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0; /* Ensure no default margin */
+    list-style: none;
+    gap: 2px; /* Reduced spacing between nav items to 2px */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem; /* 1rem = 16px */
+    padding: 0.5rem 1rem; /* Padding around links */
+    white-space: nowrap; /* Prevent links from wrapping */
+    color: #FFFFFF; /* Maintain white color even when clicked */
+}
+
+header nav ul li a:hover {
+    color: lightslategray; /* Updated to maintain a hover effect that does not change color */
+}
+
+.menu-toggle {
+    display: none; /* Hide by default, shown in responsive mode */
+    color: #FFFFFF;
+    font-size: 1.5rem; /* Icon size */
+}
+
+section {
+    padding: 2rem 0; /* 2rem = 32px for better spacing */
+    margin-top: 100px; /* Adjust for fixed header */
+}
+
+section#home {
+    background: #f4f4f4;
+    padding: 4rem 0; /* Add more padding */
+    text-align: center; /* Center align text */
+}
+
+section#platform .platform-point, section#news .news-article, section#events .event {
+    border-bottom: 1px solid #ddd; /* 1px = 0.0625rem */
+    margin-bottom: 2rem; /* 2rem = 32px */
+    padding-bottom: 1rem; /* 1rem = 16px */
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* 400px = 25rem */
+    margin: auto;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.carousel-inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFFFFF;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem; /* Increase padding */
+    border-radius: 5px;
+    width: 80%;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px; /* 24px = 1.5rem */
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+#latest-news {
+    background-image: url('../images/campaign4.JPG');
+    background-size: cover;
+    background-position: bottom;
+    padding: 50px 0;
+    color: #fff;
+}
+
+#latest-news .container {
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: Add a dark overlay */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#latest-news h2, #latest-news p, #latest-news .news-article h3 a {
+    color: #fff;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: 100%; /* Full width for better alignment */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input[type="submit"] {
+    background: #003399;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #002266;
+}
+
+footer {
+    background: #003399;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px; /* Increase padding */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+footer a:hover {
+    color: #FFFFFF;
+}
+
+footer i.fab {
+    margin-left: 5px;
+}
+
+.bio {
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bio-left {
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.bio-left h3, h4 {
+    margin-bottom: 10px;
+    color: #003399;
+}
+
+.bio-left img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.bio-right {
+    overflow: hidden;
+}
+
+.bio-right p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.platform p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.platform ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style-type: disc;
+}
+
+.platform ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.carousel-link {
+    color: white;
+    text-decoration: none;
+}
+
+.carousel-link:hover {
+    color: lightslategray;
+    text-decoration: underline;
+}
+
+ol li {
+    margin-bottom: 15px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide navigation links initially on mobile */
+        position: absolute;
+        background-color: #003399; /* Header's background color */
+        width: 100%;
+        top: 70px; /* Adjust as per header height */
+        left: 0;
+        z-index: 999;
+    }
+
+    nav ul.active {
+        display: block; /* Display menu when active (toggled) */
+    }
+
+    header nav ul {
+        display: block; /* Ensure nav is block on mobile */
+    }
+
+    header nav ul li {
+        display: block; /* Stack links vertically on mobile */
+        padding: 12px 0; /* Adjust padding for touch accessibility */
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Increase font size for better readability on mobile */
+    }
+
+    .container {
+        width: 100%; /* Full width containers on small screens */
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    form input[type="text"], form input[type="email"], form textarea {
+        width: 100%; /* Full width form elements on mobile */
+    }
+}
+
+@media (min-width: 601px) {
+    .menu-toggle {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+
+    nav ul {
+        display: flex; /* Use flexbox for horizontal alignment of links */
+    }
+
+    header nav ul li {
+        display: inline-block; /* Display links inline on desktop */
+        padding: 0 5px; /* Spacing between links */
+    }
+}
