@@ -22,6 +22,7 @@ function loadCarouselData() {
             });
 
             showSlide(currentSlide);
+            startAutoAdvance(); // Start the auto-advance after loading the slides
         })
         .catch(error => console.error('Error loading carousel data:', error));
 }
@@ -39,6 +40,13 @@ function moveSlide(step) {
     const slides = document.querySelectorAll('.carousel-item');
     currentSlide = (currentSlide + step + slides.length) % slides.length;
     showSlide(currentSlide);
+}
+
+// Function to start auto-advancing the slides
+function startAutoAdvance() {
+    setInterval(() => {
+        moveSlide(1); // Move to the next slide
+    }, 7000); // Change slides every 7 seconds (7000 milliseconds)
 }
 
 // Initialize the carousel by loading data
