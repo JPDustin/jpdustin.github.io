@@ -30,59 +30,70 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Align items centrally */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    align-items: center; /* Center align items vertically */
+    justify-content: space-between; /* Distribute space */
 }
 
 header .container {
     display: flex;
-    flex-direction: column; /* Change direction to column for stacking */
-    align-items: center; /* Align items centrally */
+    align-items: center;
+    justify-content: start; /* Align content to start from left */
     width: 100%;
+    padding: 0 20px; /* Add padding to the container */
 }
 
 header .logo {
-    order: 1; /* Logo first */
+    order: 1; /* First in order */
     height: 50px; /* Adjust size as needed */
+    margin-right: 20px; /* Space after logo */
 }
 
 header h1 {
-    order: 2; /* H1 follows the logo */
+    order: 2; /* Second in order */
     font-size: 2rem; /* 2rem = 32px */
+    margin: 0 20px 0 0; /* Margin to the right */
 }
 
 header .slogan {
-    order: 3; /* Slogan follows H1 */
-    font-size: 0.875rem; /* 0.875rem = 14px */
+    order: 3; /* Third in order */
+    font-size: 0.875rem; /* Smaller font size for slogan */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
+    margin-right: 20px; /* Margin to the right */
 }
 
 header nav {
-    order: 4; /* Navigation follows slogan */
-    width: 100%; /* Full width for alignment */
+    order: 4; /* Last in order */
+    text-align: center;
 }
 
 header nav ul {
-    justify-content: center; /* Center navigation items */
-    padding: 0;
-    list-style: none;
     display: flex;
-    gap: 1rem; /* Add spacing between nav items */
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    list-style: none;
+    gap: 10px; /* Adjust spacing between nav items */
 }
 
 header nav ul li a {
     color: #FFFFFF; /* White links */
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem; /* Increase font size */
-    padding: 0.5rem 1rem; /* Add padding for better click area */
-    transition: color 0.3s; /* Smooth transition on hover */
+    font-size: 1rem; /* 1rem = 16px */
+    padding: 0.5rem 1rem; /* Padding around links */
 }
 
 header nav ul li a:hover {
     color: #FFD700; /* Gold/Yellow on hover */
+}
+
+.menu-toggle {
+    display: none; /* Hide by default, shown in responsive */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #FFFFFF;
+    font-size: 1.5rem; /* Larger icon size */
 }
 
 .menu-toggle {
