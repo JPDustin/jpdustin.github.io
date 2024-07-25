@@ -23,47 +23,49 @@ body {
 header {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
-    padding: 1rem 0; /* Standard padding */
-    border-bottom: 3px solid #FFD700; /* Gold/Yellow border for more prominence */
+    padding: 10px 0; /* Adjusted padding */
+    border-bottom: 3px solid #FFD700; /* Gold/Yellow border */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    align-items: center; /* Center align items vertically */
-    justify-content: space-between; /* Space between items */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Align items centrally */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 header .container {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Change direction to column for stacking */
+    align-items: center; /* Align items centrally */
+    width: 100%;
 }
 
 header .logo {
+    order: 1; /* Logo first */
     height: 50px; /* Adjust size as needed */
-    margin-right: 1rem; /* Reduce spacing between logo and H1 */
 }
 
 header h1 {
-    margin: 0;
+    order: 2; /* H1 follows the logo */
     font-size: 2rem; /* 2rem = 32px */
-    flex: 1; /* Take up remaining space */
 }
 
 header .slogan {
+    order: 3; /* Slogan follows H1 */
     font-size: 0.875rem; /* 0.875rem = 14px */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
-    margin: 0;
 }
 
 header nav {
-    text-align: center;
-    margin-top: 0.3125rem; /* Slight top margin */
+    order: 4; /* Navigation follows slogan */
+    width: 100%; /* Full width for alignment */
 }
 
 header nav ul {
+    justify-content: center; /* Center navigation items */
     padding: 0;
     list-style: none;
     display: flex;
