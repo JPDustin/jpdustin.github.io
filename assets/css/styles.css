@@ -202,7 +202,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
     border-radius: 10px;
 }
 
-#latest-news h2, #latest-news p, #latest-news .news-article h3 a {
+#latest-news h2, #latest-news p, #latest-news .news-article h3, a {
     color: #fff;
     text-align: center;
 }
