@@ -43,6 +43,11 @@ header .container {
     margin: 0 auto; /* Center the container */
 }
 
+header .logo {
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+    height: 50px; /* Adjust size as needed */
+}
+
 header .title-slogan {
     display: flex;
     flex-direction: column; /* Stack h1 and slogan vertically */
@@ -103,7 +108,7 @@ section {
 
 section#home {
     background: #f4f4f4;
-    padding: 4rem 0; /* Add more padding */
+    padding: 2rem 0; /* Adjusted padding for mobile */
     text-align: center; /* Center align text */
 }
 
@@ -116,7 +121,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
 .carousel {
     position: relative;
     max-width: 100%;
-    height: 400px; /* 400px = 25rem */
+    height: auto; /* Auto height for responsive scaling */
     margin: auto;
     overflow: hidden;
     background-color: #f4f4f4;
@@ -132,12 +137,12 @@ section#platform .platform-point, section#news .news-article, section#events .ev
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
-    height: 100%;
+    height: auto; /* Auto height for responsive scaling */
 }
 
 .carousel img {
     width: 100%;
-    height: 100%;
+    height: auto; /* Auto height for responsive scaling */
     object-fit: cover;
     vertical-align: middle;
 }
@@ -332,26 +337,48 @@ ol li {
         position: absolute;
         background-color: #003399; /* Header's background color */
         width: 100%;
-        top: 70px; /* Adjust as per header height */
+        top: 60px; /* Adjust as per header height */
         left: 0;
         z-index: 999;
+        flex-direction: column; /* Stack links vertically on mobile */
+        padding: 0;
     }
 
     nav ul.active {
-        display: block; /* Display menu when active (toggled) */
+        display: flex; /* Display menu when active (toggled) */
     }
 
     header nav ul {
-        display: block; /* Ensure nav is block on mobile */
+        display: flex; /* Ensure nav is flex on mobile */
+        flex-direction: column; /* Stack links vertically on mobile */
+        width: 100%; /* Full width for better alignment */
     }
 
     header nav ul li {
         display: block; /* Stack links vertically on mobile */
         padding: 12px 0; /* Adjust padding for touch accessibility */
+        text-align: center; /* Center align links */
     }
 
     header nav ul li a {
         font-size: 16px; /* Increase font size for better readability on mobile */
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start; /* Align to the start on mobile */
+        padding: 10px;
+    }
+
+    header .title-slogan {
+        align-items: center; /* Center align items */
+        text-align: center; /* Center text */
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 1rem 0; /* Reduce padding for mobile */
     }
 
     .container {
@@ -359,22 +386,7 @@ ol li {
         padding: 0 10px; /* Adjust padding */
     }
 
-    form input[type="text"], form input[type="email"], form textarea {
-        width: 100%; /* Full width form elements on mobile */
-    }
-}
-
-@media (min-width: 601px) {
-    .menu-toggle {
-        display: none; /* Hide hamburger menu on desktop */
-    }
-
-    nav ul {
-        display: flex; /* Use flexbox for horizontal alignment of links */
-    }
-
-    header nav ul li {
-        display: inline-block; /* Display links inline on desktop */
-        padding: 0 5px; /* Spacing between links */
+    .carousel-inner {
+        flex-direction: column; /* Ensure carousel items stack properly */
     }
 }
