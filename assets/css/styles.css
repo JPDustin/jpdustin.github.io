@@ -173,7 +173,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
 }
 
 #latest-news {
-    background-image: url('../../assets/images/campaign4.jpg');
+    background-image: url('../assets/images/campaign4.jpg');
     background-size: cover;
     background-position: bottom;
     padding: 50px 0;
