@@ -321,7 +321,8 @@ form input[type="text"], form input[type="email"], form textarea {
     font-size: 1rem;
 }
 
-form input[type="submit"] {
+form input[type="submit"],
+button[type="submit"].btn-submit {
     background: #003399;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -330,9 +331,11 @@ form input[type="submit"] {
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.3s;
+    margin-bottom: 2rem
 }
 
-form input[type="submit"]:hover {
+form input[type="submit"]:hover,
+button[type="submit"].btn-submit:hover {
     background: #002266;
 }
 
@@ -341,11 +344,16 @@ form input[type="submit"]:hover {
     text-decoration: underline;
 }
 
+#volunteer a:hover {
+    color: #002266;
+}
+
 footer {
     background: #003399;
     color: #FFFFFF;
     text-align: center;
     padding: 20px; /* Increase padding */
+    margin-top: 20px; /* Add space at the top */
 }
 
 footer p {
