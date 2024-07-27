@@ -4,48 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - Powerslate</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">633 Teamsters Power Slate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/platform.html">Our Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="mt-5 pt-3 text-center">
         <div class="container">
             <div class="title-slogan">
                 <h1>633 Teamsters Power Slate</h1>
                 <p class="slogan">"Bringing power back to the members"</p>
             </div>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span class="hamburger">&#9776;</span> <!-- Unicode for hamburger icon -->
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/pages/about.html">About Us</a></li>
-                    <li><a href="/pages/platform.html">Our Platform</a></li>
-                    <li><a href="/pages/news.html">News</a></li>
-                    <li><a href="/pages/events.html">Events</a></li>
-                    <li><a href="/pages/contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
-    <section id="news">
+
+    <section id="news" class="mt-5">
         <div class="container">
             <h2>News</h2>
             <p>Stay updated with the latest news and updates from the Powerslate.</p>
-    
+
             <div class="news-article">
                 <h3><a href="/docs/content/news/article1.html">Powerslate Begins Their Run for Leadership Positions Within Local 633's Union Hall</a></h3>
                 <p>In an effort to bring dynamic and proactive leadership to Local 633's Union Hall, the 633 Teamster Powerslate has launched their campaign for leadership positions. The Powerslate's mission is rooted in a commitment to exceptional representation, characterized by diligence, integrity, and transparency. This new slate promises to advocate assertively for union members, challenging the longstanding incumbents, the Member's First Slate...<a href="/docs/content/news/article1.html">Read more</a></p>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Powerslate. All rights reserved.</p>
             <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../assets/js/menu.js"></script>
 </body>
 </html>

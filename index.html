@@ -4,32 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Powerslate - Local Union Elections</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
+            <a class="navbar-brand" href="/">633 Teamsters Power Slate</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/platform.html">Our Platform</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="mt-5 pt-3">
+        <div class="container text-center">
             <div class="title-slogan">
                 <h1>633 Teamsters Power Slate</h1>
                 <p class="slogan">"Bringing power back to the members"</p>
             </div>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <span class="hamburger">&#9776;</span> <!-- Unicode for hamburger icon -->
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/pages/about.html">About Us</a></li>
-                    <li><a href="/pages/platform.html">Our Platform</a></li>
-                    <li><a href="/pages/news.html">News</a></li>
-                    <li><a href="/pages/events.html">Events</a></li>
-                    <li><a href="/pages/contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
-    <section id="home">
+
+    <section id="home" class="mt-5">
         <div class="container">
             <h2>Welcome to the 633 Teamsters Power Slate Campaign Page</h2>
             <p>We are a dedicated group of IBT Local 633 Teamster stewards and members campaigning for the Executive Board positions of the International Brotherhood of Teamsters Local 633.</p>
@@ -42,6 +63,7 @@
             <a class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
         </div>
     </section>
+
     <section id="latest-news">
         <div class="container">
             <h2>Latest News</h2>
@@ -51,6 +73,7 @@
             </div>
         </div>
     </section>
+
     <section id="upcoming-events">
         <div class="container">
             <h2>Upcoming Events</h2>
@@ -64,6 +87,7 @@
             </div>
         </div>
     </section>
+
     <section id="volunteer">
         <div class="container">
             <h2>Get Involved</h2>
@@ -78,24 +102,29 @@
                 <input type="submit" value="Submit">
             </form>
             <div id="formConfirmation" style="display:none;">Thank you for your submission!</div>
-            <p>For more ways to get involved, visit our <a href="/pages/get-involved.html">Get Involved</a> page.</p>
+            <p>For more ways to get involved, visit our <a href="pages/get-involved.html">Get Involved</a> page.</p>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Powerslate. All rights reserved.</p>
             <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
         </div>
     </footer>
-    <script src="/assets/js/scripts.js"></script>
-    <script src="/assets/js/menu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/menu.js"></script>
     <script>
         document.getElementById('volunteerForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
-            
+
             var form = event.target;
             var data = new FormData(form);
-            
+
             fetch(form.action, {
                 method: 'POST',
                 body: data,
@@ -108,6 +137,62 @@
                 console.error('Error!', error.message);
             });
         });
+
+        let currentSlide = 0;
+
+        // Function to load carousel data from local JSON
+        function loadCarouselData() {
+            fetch('../assets/js/localData.json')
+                .then(response => response.json())
+                .then(data => {
+                    const slides = data.slides;
+                    const carouselInner = document.getElementById('carousel-inner');
+
+                    slides.forEach((slide, index) => {
+                        const slideElement = document.createElement('div');
+                        slideElement.className = `carousel-item${index === 0 ? ' active' : ''}`;
+                        slideElement.innerHTML = `
+                            <img src="${slide.image}" alt="${slide.title}">
+                            <div class="carousel-caption">
+                                <h3>${slide.link ? `<a href="${slide.link}" class="carousel-link">${slide.title}</a>` : slide.title}</h3>
+                                <p>${slide.description}</p>
+                            </div>
+                        `;
+                        carouselInner.appendChild(slideElement);
+                    });
+
+                    showSlide(currentSlide);
+                    startAutoAdvance(); // Start the auto-advance after loading the slides
+                })
+                .catch(error => console.error('Error loading carousel data:', error));
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel-item');
+            currentSlide = (currentSlide + step + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Function to start auto-advancing the slides
+        function startAutoAdvance() {
+            setInterval(() => {
+                moveSlide(1); // Move to the next slide
+            }, 7000); // Change slides every 7 seconds (7000 milliseconds)
+        }
+
+        // Initialize the carousel by loading data
+        loadCarouselData();
     </script>
 </body>
 </html>

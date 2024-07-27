@@ -13,14 +13,14 @@ body {
     line-height: 1.6; /* Improved line height for readability */
 }
 
-.container {
+.custom-container {
     width: 80%;
     margin: auto;
     overflow: hidden;
     padding: 1rem; /* Add padding for better spacing */
 }
 
-header {
+.custom-header {
     background: #003399; /* Blue background */
     color: #FFFFFF; /* White text */
     padding: 10px 20px; /* Adjusted padding */
@@ -34,7 +34,7 @@ header {
     justify-content: space-between; /* Space between items properly */
 }
 
-header .container {
+.custom-header .container {
     display: flex;
     align-items: center;
     justify-content: start; /* Align content from the start */
@@ -43,19 +43,19 @@ header .container {
     margin: 0 auto; /* Center the container */
 }
 
-header .logo {
+.custom-header .logo {
     flex-shrink: 0; /* Prevent the logo from shrinking */
     height: 50px; /* Adjust size as needed */
 }
 
-header .title-slogan {
+.custom-header .title-slogan {
     display: flex;
     flex-direction: column; /* Stack h1 and slogan vertically */
     align-items: flex-start; /* Align items to the start */
     flex-grow: 1; /* Allow it to take up available space */
 }
 
-header h1 {
+.custom-header h1 {
     margin: 0; /* Remove margin to handle spacing tightly */
     font-size: 2rem; /* 2rem = 32px */
     white-space: nowrap; /* Prevent h1 from wrapping */
@@ -63,56 +63,25 @@ header h1 {
     text-overflow: ellipsis; /* Add ellipsis if text is too long */
 }
 
-header .slogan {
+.custom-header .slogan {
     font-size: 0.875rem; /* Adjust font size */
     font-style: italic;
     color: #FFD700; /* Gold/Yellow text */
     margin-top: 0px;
 }
 
-header nav {
-    text-align: center;
-}
-
-header nav ul {
-    display: flex;
-    padding: 0;
-    margin: 0; /* Ensure no default margin */
-    list-style: none;
-    gap: 2px; /* Reduced spacing between nav items to 2px */
-}
-
-header nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem; /* 1rem = 16px */
-    padding: 0.5rem 1rem; /* Padding around links */
-    white-space: nowrap; /* Prevent links from wrapping */
-    color: #FFFFFF; /* Maintain white color even when clicked */
-}
-
-header nav ul li a:hover {
-    color: lightslategray; /* Updated to maintain a hover effect that does not change color */
-}
-
-.menu-toggle {
-    display: none; /* Hide by default, shown in responsive mode */
-    color: #FFFFFF;
-    font-size: 1.5rem; /* Icon size */
-}
-
-section {
+.custom-section {
     padding: 2rem 0; /* 2rem = 32px for better spacing */
     margin-top: 100px; /* Adjust for fixed header */
 }
 
-section#home {
+.custom-section#home {
     background: #f4f4f4;
     padding: 2rem 0; /* Adjusted padding for mobile */
     text-align: center; /* Center align text */
 }
 
-section#platform .platform-point, section#news .news-article, section#events .event {
+.custom-section .custom-border {
     border-bottom: 1px solid #ddd; /* 1px = 0.0625rem */
     margin-bottom: 2rem; /* 2rem = 32px */
     padding-bottom: 1rem; /* 1rem = 16px */
@@ -120,8 +89,8 @@ section#platform .platform-point, section#news .news-article, section#events .ev
 
 .carousel {
     position: relative;
-    max-width: 100%;
-    height: auto; /* Auto height for responsive scaling */
+    width: 100%; /* Ensure the carousel is full width */
+    height: 400px; /* Fixed height for the carousel */
     margin: auto;
     overflow: hidden;
     background-color: #f4f4f4;
@@ -129,7 +98,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
 
 .carousel-inner {
     display: flex;
-    height: 100%;
+    height: 100%; /* Ensure the inner container fills the carousel height */
     transition: transform 0.5s ease;
 }
 
@@ -150,7 +119,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
 
 .carousel img {
     width: 100%;
-    height: auto; /* Auto height for responsive scaling */
+    height: 100%; /* Ensure the images fill the carousel height */
     object-fit: cover;
     vertical-align: middle;
 }
@@ -196,7 +165,7 @@ section#platform .platform-point, section#news .news-article, section#events .ev
     color: #fff;
 }
 
-#latest-news .container {
+#latest-news .custom-container {
     background-color: rgba(0, 0, 0, 0.2); /* Optional: Add a dark overlay */
     padding: 2rem;
     border-radius: 10px;
@@ -336,49 +305,18 @@ ol li {
 
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
-    .menu-toggle {
-        display: block; /* Show hamburger menu on mobile */
+    .custom-container {
+        width: 100%; /* Full width containers on small screens */
+        padding: 0 10px; /* Adjust padding */
     }
 
-    nav ul {
-        display: none; /* Hide navigation links initially on mobile */
-        position: absolute;
-        background-color: #003399; /* Header's background color */
-        width: 100%;
-        top: 60px; /* Adjust as per header height */
-        left: 0;
-        z-index: 999;
-        flex-direction: column; /* Stack links vertically on mobile */
-        padding: 0;
-    }
-
-    nav ul.active {
-        display: flex; /* Display menu when active (toggled) */
-    }
-
-    header nav ul {
-        display: flex; /* Ensure nav is flex on mobile */
-        flex-direction: column; /* Stack links vertically on mobile */
-        width: 100%; /* Full width for better alignment */
-    }
-
-    header nav ul li {
-        display: block; /* Stack links vertically on mobile */
-        padding: 12px 0; /* Adjust padding for touch accessibility */
-        text-align: center; /* Center align links */
-    }
-
-    header nav ul li a {
-        font-size: 16px; /* Increase font size for better readability on mobile */
-    }
-
-    header .container {
+    .custom-header .container {
         flex-direction: column;
         align-items: flex-start; /* Align to the start on mobile */
         padding: 10px;
     }
 
-    header .title-slogan {
+    .custom-header .title-slogan {
         align-items: center; /* Center align items */
         text-align: center; /* Center text */
         width: 100%;
@@ -387,11 +325,6 @@ ol li {
 
     section {
         padding: 1rem 0; /* Reduce padding for mobile */
-    }
-
-    .container {
-        width: 100%; /* Full width containers on small screens */
-        padding: 0 10px; /* Adjust padding */
     }
 
     .carousel-inner {
