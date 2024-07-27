@@ -1,3 +1,82 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header styles */
+#header-image-bg {
+    position: relative;
+    background-image: url('../images/header-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
+
+#header-title {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    transform: translateY(-20%);
+}
+
+#header-title h1 {
+    color: #FCAD03;
+    font-size: 4.0em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px; /* Reduce the space below the title */
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+#header-title p {
+    color: white;
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0; 
+}
+
+/* Navigation styles */
+.navbar {
+    background: none;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; /* Add space between links */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: lightslategray;
+    text-decoration: underline;
+}
+
 /* General styles */
 html {
     font-size: 16px; /* This makes 1rem equal to 16px */
