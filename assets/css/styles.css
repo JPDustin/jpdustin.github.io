@@ -40,6 +40,7 @@ html, body {
     color: white;
     font-size: 1.5em;
     font-style: italic;
+    text-align: right;
     margin: 0; 
 }
 
@@ -67,7 +68,7 @@ html, body {
 
 .navbar-nav .nav-item .nav-link {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-decoration: none;
     padding: 10px; /* Add padding for better spacing */
 }
@@ -75,6 +76,40 @@ html, body {
 .navbar-nav .nav-item .nav-link:hover {
     color: lightslategray;
     text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8); /* Optional: Darken background */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
 }
 
 /* General styles */
@@ -122,6 +157,11 @@ body {
     margin: 0 auto; /* Center the container */
 }
 
+.container h2 {
+    color: black;
+    font-size: 3rem;
+    font-style: bold;
+}
 .custom-header .logo {
     flex-shrink: 0; /* Prevent the logo from shrinking */
     height: 50px; /* Adjust size as needed */
@@ -253,6 +293,10 @@ body {
 #latest-news h2, #latest-news p, #latest-news .news-article h3, a {
     color: #fff;
     text-align: center;
+}
+
+.event h4 {
+    color: black
 }
 
 form label {
