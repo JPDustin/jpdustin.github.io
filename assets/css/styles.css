@@ -336,6 +336,11 @@ form input[type="submit"]:hover {
     background: #002266;
 }
 
+#volunteer a {
+    color: #003399;
+    text-decoration: underline;
+}
+
 footer {
     background: #003399;
     color: #FFFFFF;
