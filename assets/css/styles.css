@@ -16,7 +16,7 @@ html, body {
 }
 
 #header-title {
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 10px 20px;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -31,7 +31,7 @@ html, body {
     font-size: 3.0em;
     font-weight: bold;
     margin: 0;
-    margin-bottom: 5px; /* Reduce the space below the title */
+    margin-bottom: 5px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.2rem;
 }
@@ -41,7 +41,7 @@ html, body {
     font-size: 1.5em;
     font-style: italic;
     text-align: right;
-    margin: 0; 
+    margin: 0;
 }
 
 /* Navigation styles */
@@ -61,16 +61,18 @@ html, body {
 }
 
 .navbar-nav {
-    flex-direction: row;
+    display: flex;
     justify-content: center;
-    gap: 20px; /* Add space between links */
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
 .navbar-nav .nav-item .nav-link {
     color: #fff;
     font-size: 1.5em;
     text-decoration: none;
-    padding: 10px; /* Add padding for better spacing */
+    padding: 10px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -78,25 +80,26 @@ html, body {
     text-decoration: underline;
 }
 
+.collapse {
+    display: none;
+}
+
 @media (max-width: 992px) {
-    .navbar-collapse {
+    .collapse {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8); /* Optional: Darken background */
+        background-color: rgba(0, 0, 0, 0.8);
         position: fixed;
         top: 0;
         right: 0;
         width: 100%;
         z-index: 1000;
-        transition: height 0.3s ease-out, visibility 0.3s ease-out, opacity 0.3s ease-out;
     }
 
-    .navbar-toggler.collapsed + .navbar-collapse {
-        height: auto;
-        visibility: visible;
-        opacity: 1;
+    .navbar-toggler.collapsed + .collapse {
+        display: flex;
     }
 
     .navbar-nav {
@@ -121,47 +124,47 @@ html, body {
 
 /* General styles */
 html {
-    font-size: 16px; /* This makes 1rem equal to 16px */
-    overflow-y: scroll; /* Always show vertical scrollbar to prevent shifting content */
+    font-size: 16px;
+    overflow-y: scroll;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF; /* White background */
-    color: #333333; /* Dark gray text */
-    line-height: 1.6; /* Improved line height for readability */
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
 }
 
 .custom-container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    padding: 1rem; /* Add padding for better spacing */
+    padding: 1rem;
 }
 
 .custom-header {
-    background: #003399; /* Blue background */
-    color: #FFFFFF; /* White text */
-    padding: 10px 20px; /* Adjusted padding */
-    border-bottom: 3px solid #FFD700; /* Gold/Yellow border */
+    background: #003399;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-bottom: 3px solid #FFD700;
     position: fixed;
-    width: 100%; /* Ensure the header is full width */
+    width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    align-items: center; /* Center align items vertically */
-    justify-content: space-between; /* Space between items properly */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .custom-header .container {
     display: flex;
     align-items: center;
-    justify-content: start; /* Align content from the start */
+    justify-content: start;
     width: 100%;
-    max-width: 1200px; /* Limit the maximum width for better control */
-    margin: 0 auto; /* Center the container */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container h2 {
@@ -171,53 +174,53 @@ body {
 }
 
 .custom-header .logo {
-    flex-shrink: 0; /* Prevent the logo from shrinking */
-    height: 50px; /* Adjust size as needed */
+    flex-shrink: 0;
+    height: 50px;
 }
 
 .custom-header .title-slogan {
     display: flex;
-    flex-direction: column; /* Stack h1 and slogan vertically */
-    align-items: flex-start; /* Align items to the start */
-    flex-grow: 1; /* Allow it to take up available space */
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
 }
 
 .custom-header h1 {
-    margin: 0; /* Remove margin to handle spacing tightly */
-    font-size: 2rem; /* 2rem = 32px */
-    white-space: nowrap; /* Prevent h1 from wrapping */
-    overflow: hidden; /* Hide overflow */
-    text-overflow: ellipsis; /* Add ellipsis if text is too long */
+    margin: 0;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .custom-header .slogan {
-    font-size: 0.875rem; /* Adjust font size */
+    font-size: 0.875rem;
     font-style: italic;
-    color: #FFD700; /* Gold/Yellow text */
+    color: #FFD700;
     margin-top: 0px;
 }
 
 .custom-section {
-    padding: 2rem 0; /* 2rem = 32px for better spacing */
-    margin-top: 100px; /* Adjust for fixed header */
+    padding: 2rem 0;
+    margin-top: 100px;
 }
 
 .custom-section#home {
     background: #f4f4f4;
-    padding: 2rem 0; /* Adjusted padding for mobile */
-    text-align: center; /* Center align text */
+    padding: 2rem 0;
+    text-align: center;
 }
 
 .custom-section .custom-border {
-    border-bottom: 1px solid #ddd; /* 1px = 0.0625rem */
-    margin-bottom: 2rem; /* 2rem = 32px */
-    padding-bottom: 1rem; /* 1rem = 16px */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .carousel {
     position: relative;
-    width: 100%; /* Ensure the carousel is full width */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    width: 100%;
+    padding-bottom: 56.25%;
     overflow: hidden;
     background-color: #f4f4f4;
 }
@@ -260,7 +263,7 @@ body {
     color: #FFFFFF;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-    padding: 1rem; /* Increase padding */
+    padding: 1rem;
     border-radius: 5px;
     width: 80%;
 }
@@ -269,7 +272,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 24px; /* 24px = 1.5rem */
+    font-size: 24px;
     color: #FFFFFF;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -294,14 +297,30 @@ body {
 }
 
 #latest-news .custom-container {
-    background-color: rgba(0, 0, 0, 0.2); /* Optional: Add a dark overlay */
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 2rem;
     border-radius: 10px;
 }
 
-#latest-news h2, #latest-news p, #latest-news .news-article h3, a {
-    color: #fff;
+#latest-news h2, #latest-news p, #latest-news {
+    color: white;
     text-align: center;
+}
+
+.latest-news a {
+    color: white;
+}
+
+.latest-news a:hover {
+    color: lightslategray;
+}
+
+.news-article h3, a {
+    color: #003399;
+}
+
+.news-article a:hover {
+    color: #002266;
 }
 
 .event h4 {
@@ -314,7 +333,7 @@ form label {
 }
 
 form input[type="text"], form input[type="email"], form textarea {
-    width: 100%; /* Full width for better alignment */
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -340,22 +359,21 @@ button[type="submit"].btn-submit:hover {
     background: #002266;
 }
 
-a {
-    color: #003399; /* Link color */
-    text-decoration: underline; /* Underline links */
-    transition: color 0.3s; /* Smooth transition on hover */
+#volunteer a {
+    color: #003399;
+    text-decoration: underline;
 }
 
-a:hover {
-    color: #002266; /* Link color on hover */
+#volunteer a:hover {
+    color: #002266;
 }
 
 footer {
     background: #003399;
     color: #FFFFFF;
     text-align: center;
-    padding: 20px; /* Increase padding */
-    margin-top: 20px; /* Add space at the top */
+    padding: 20px;
+    margin-top: 20px;
 }
 
 footer p {
@@ -365,7 +383,7 @@ footer p {
 footer a {
     color: #FFD700;
     text-decoration: none;
-    transition: color 0.3s; /* Smooth transition on hover */
+    transition: color 0.3s;
 }
 
 footer a:hover {
@@ -377,16 +395,16 @@ footer i.fab {
 }
 
 .bio {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
 }
 
 .bio-left {
-    flex: 0 0 150px;
+    float: left;
     margin-right: 20px;
     text-align: center;
 }
@@ -403,7 +421,7 @@ footer i.fab {
 }
 
 .bio-right {
-    flex: 1;
+    overflow: hidden;
 }
 
 .bio-right p {
@@ -452,43 +470,28 @@ ol li {
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
     .custom-container {
-        width: 100%; /* Full width containers on small screens */
-        padding: 0 10px; /* Adjust padding */
+        width: 100%;
+        padding: 0 10px;
     }
 
     .custom-header .container {
         flex-direction: column;
-        align-items: flex-start; /* Align to the start on mobile */
+        align-items: flex-start;
         padding: 10px;
     }
 
     .custom-header .title-slogan {
-        align-items: center; /* Center align items */
-        text-align: center; /* Center text */
+        align-items: center;
+        text-align: center;
         width: 100%;
         margin-bottom: 10px;
     }
 
     section {
-        padding: 1rem 0; /* Reduce padding for mobile */
+        padding: 1rem 0;
     }
 
     .carousel-inner {
-        flex-direction: column; /* Ensure carousel items stack properly */
-    }
-
-    .bio {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .bio-left {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .bio-right {
-        text-align: center;
     }
 }
