@@ -315,6 +315,9 @@ body {
     color: lightslategray;
 }
 
+.latest-news p {
+    margin-bottom: 8rem;
+}
 .news-article h3, a {
     color: #003399;
 }
