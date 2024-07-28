@@ -331,7 +331,7 @@ button[type="submit"].btn-submit {
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.3s;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 form input[type="submit"]:hover,
@@ -375,16 +375,16 @@ footer i.fab {
 }
 
 .bio {
-    max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
 }
 
 .bio-left {
-    float: left;
+    flex: 0 0 150px;
     margin-right: 20px;
     text-align: center;
 }
@@ -398,10 +398,11 @@ footer i.fab {
     width: 150px;
     height: auto;
     border-radius: 50%;
+    
 }
 
 .bio-right {
-    overflow: hidden;
+    flex: 1;
 }
 
 .bio-right p {
@@ -473,5 +474,20 @@ ol li {
 
     .carousel-inner {
         flex-direction: column; /* Ensure carousel items stack properly */
+    }
+
+    .bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bio-left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .bio-right {
+        text-align: center;
     }
 }
