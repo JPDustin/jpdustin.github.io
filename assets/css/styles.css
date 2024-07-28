@@ -169,6 +169,7 @@ body {
     font-size: 3rem;
     font-style: bold;
 }
+
 .custom-header .logo {
     flex-shrink: 0; /* Prevent the logo from shrinking */
     height: 50px; /* Adjust size as needed */
@@ -339,13 +340,14 @@ button[type="submit"].btn-submit:hover {
     background: #002266;
 }
 
-#volunteer a {
-    color: #003399;
-    text-decoration: underline;
+a {
+    color: #003399; /* Link color */
+    text-decoration: underline; /* Underline links */
+    transition: color 0.3s; /* Smooth transition on hover */
 }
 
-#volunteer a:hover {
-    color: #002266;
+a:hover {
+    color: #002266; /* Link color on hover */
 }
 
 footer {
@@ -398,7 +400,6 @@ footer i.fab {
     width: 150px;
     height: auto;
     border-radius: 50%;
-    
 }
 
 .bio-right {
