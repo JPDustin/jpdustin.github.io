@@ -495,4 +495,18 @@ ol li {
   .carousel-inner {
     flex-direction: column;
   }
+
+  .bio-content p {
+    text-align: left; /* Switch to left alignment on smaller screens */
+  }
+
+  .bio-img {
+    float: none; /* Disable floating on smaller screens */
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add margin below */
+  }
+
+  .bio h4 {
+    text-align: center; /* Center the h4 text on smaller screens */
+  }
 }
