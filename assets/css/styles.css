@@ -569,4 +569,10 @@ ol li {
   .union-rights {
     margin-top: 20px;
   }
+
+  #disclaimer p {
+    font-style: italic;
+    padding: 2rem 0;
+    text-align: center;
+  }
 }
