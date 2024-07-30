@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Slate - Local Union Elections</title>
+    <title>Power Slate - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
     <header id="header-image-bg">
         <!-- Title and Slogan -->
@@ -19,7 +21,8 @@
         <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,7 +40,7 @@
                             <a class="nav-link" href="/pages/news.html">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pages/events.html">Events</a>
+                            <a class="nav-link" href="/pages/events.html">Information and Events</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/contact.html">Contact Us</a>
@@ -51,7 +54,8 @@
     <section id="home" class="custom-section">
         <div class="custom-container">
             <h2>Welcome to the 633 Teamsters Power Slate Campaign Page</h2>
-            <p>We are a dedicated group of IBT Local 633 Teamster stewards and members campaigning for the Executive Board positions of the International Brotherhood of Teamsters Local 633.</p>
+            <p>We are a dedicated group of IBT Local 633 Teamster stewards and members campaigning for the Executive
+                Board positions of the International Brotherhood of Teamsters Local 633.</p>
         </div>
         <div class="carousel">
             <div class="carousel-inner" id="carousel-inner">
@@ -71,15 +75,19 @@
             </div>
             <div class="event">
                 <h2>Campaigning Has Begun</h2>
-                <p>Keep an eye out for us at your place of employment as we make our way across the state to talk to you and earn your support.</p>
+                <p>Keep an eye out for us at your place of employment as we make our way across the state to talk to you
+                    and earn your support.</p>
                 <section id="latest-news">
                     <div class="custom-container">
                         <div class="latest-news">
-                            <h3><a href="/docs/content/news/article1.html">Power Slate Begins Their Run for Leadership Positions Within Local 633's Union Hall</a></h3>
-                            <p>In an effort to bring dynamic and proactive leadership to Local 633's Union Hall, the 633 Teamster Power Slate has launched their campaign for leadership positions...<a href="./docs/content/news/article1.html">read more</a></p>
+                            <h3><a href="/docs/content/news/article1.html">Power Slate Begins Their Run for Leadership
+                                    Positions Within Local 633's Union Hall</a></h3>
+                            <p>In an effort to bring dynamic and proactive leadership to Local 633's Union Hall, the 633
+                                Teamster Power Slate has launched their campaign for leadership positions...<a
+                                    href="./docs/content/news/article1.html">read more</a></p>
                         </div>
                     </div>
-                </section>            
+                </section>
             </div>
         </div>
     </section>
@@ -88,7 +96,9 @@
         <div class="custom-container">
             <h2>Get Involved</h2>
             <p>We welcome volunteers to join us in our efforts. Fill out the form below to get involved.</p>
-            <form id="volunteerForm" action="https://script.google.com/macros/s/AKfycbzeK3NyOgLNKUYPrXKoiIfqsZlxJDNKSbi1wVW4kf5tq96V4zkl4q5R1BRjJtERQ3pidA/exec" method="post">
+            <form id="volunteerForm"
+                action="https://script.google.com/macros/s/AKfycbzeK3NyOgLNKUYPrXKoiIfqsZlxJDNKSbi1wVW4kf5tq96V4zkl4q5R1BRjJtERQ3pidA/exec"
+                method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email</label>
@@ -105,7 +115,8 @@
     <footer>
         <div class="custom-container">
             <p>&copy; 2024 Power Slate. All rights reserved.</p>
-            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i
+                        class="fab fa-facebook"></i> Facebook</a></p>
         </div>
     </footer>
 
@@ -115,7 +126,7 @@
     <script src="./assets/js/scripts.js"></script>
     <script src="./assets/js/menu.js"></script>
     <script>
-        document.getElementById('volunteerForm').addEventListener('submit', function(event) {
+        document.getElementById('volunteerForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent default form submission
 
             var form = event.target;
@@ -125,11 +136,11 @@
                 method: 'POST',
                 body: data,
                 mode: 'no-cors'
-            }).then(function() {
+            }).then(function () {
                 // Hide the form and show the confirmation message
                 form.style.display = 'none';
                 document.getElementById('formConfirmation').style.display = 'block';
-            }).catch(function(error) {
+            }).catch(function (error) {
                 console.error('Error!', error.message);
             });
         });
@@ -191,4 +202,5 @@
         loadCarouselData();
     </script>
 </body>
+
 </html>
