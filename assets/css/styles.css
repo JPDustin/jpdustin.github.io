@@ -121,6 +121,12 @@ body {
     text-align: center;
     padding: 1rem;
   }
+
+  #disclaimer p {
+    font-style: italic;
+    padding: 2rem 0;
+    text-align: center;
+  }
 }
 
 /* General styles */
