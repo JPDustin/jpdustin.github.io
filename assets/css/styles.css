@@ -329,7 +329,7 @@ a {
   color: #002266;
 }
 
-#disclaimer {
+#disclaimer p {
   font-style: italic;
   padding: 2rem 0;
   text-align: center;
