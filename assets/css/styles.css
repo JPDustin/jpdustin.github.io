@@ -81,10 +81,6 @@ body {
   text-decoration: underline;
 }
 
-.collapse {
-  display: none;
-}
-
 @media (max-width: 992px) {
   .collapse {
     display: flex;
