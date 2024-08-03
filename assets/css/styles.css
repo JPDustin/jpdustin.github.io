@@ -223,6 +223,22 @@ body {
   padding-bottom: 1rem;
 }
 
+.survey-banner {
+  padding: 5rem 1rem;
+  text-align: center;
+  background-color: #f8f9fa; /* Light grey background for contrast */
+  border: 2px solid #003399; /* Blue border to match the primary color scheme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.survey-banner .container-custom {
+  max-width: 600px; /* Custom width to make the banner narrower */
+  margin: 0 auto; /* Center the container */
+  padding: 1rem; /* Additional padding inside the container */
+  background-color: #ffffff; /* White background inside the container */
+  border-radius: 10px; /* Match rounded corners */
+}
+
 .carousel {
   position: relative;
   width: 100%;
