@@ -171,8 +171,8 @@ body {
 }
 
 .container h2 {
-  color: black;
-  font-style: bold;
+  color: #003399;
+  font-weight: 700;
 }
 
 .custom-header .logo {
@@ -467,6 +467,10 @@ footer i.fab {
   text-align: justify;
 }
 
+hr {
+  width: auto;
+  margin-left: 80px;
+}
 .clearfix::after {
   content: "";
   display: table;
