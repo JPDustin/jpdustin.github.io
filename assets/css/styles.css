@@ -515,6 +515,11 @@ ol li {
     padding: 0 10px;
   }
 
+  hr {
+    margin-left: auto;
+    width: auto;
+  }
+
   .custom-header .container {
     flex-direction: column;
     align-items: flex-start;
