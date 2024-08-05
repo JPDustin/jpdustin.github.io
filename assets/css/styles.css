@@ -140,6 +140,12 @@ body {
   line-height: 1.6;
 }
 
+body h2 {
+  color: #039;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .custom-container {
   width: 80%;
   margin: auto;
