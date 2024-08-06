@@ -353,16 +353,16 @@ a {
   color: #002266;
 }
 
-#disclaimer {
-  font-style: italic;
-  padding: 2rem 0;
-  text-align: center;
-}
-
 .event h4 {
   color: black;
 }
 
+.event span {
+  color: firebrick;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem;
+}
 .info-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -515,9 +515,34 @@ ol li {
 }
 
 .union-rights {
-  border: 2px;
-  border-style: double;
-  border-color: #003399;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border: 2px #002266 double;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.union-rights blockquote {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.union-rights p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: center;
+  font-style: italic;
+}
+
+.union-rights h3 {
+  margin: 0 0 10px 0;
+  color: firebrick;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Media queries for responsiveness */
