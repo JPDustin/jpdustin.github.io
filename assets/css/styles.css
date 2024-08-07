@@ -57,7 +57,6 @@ li a {
   font-weight: bold;
   color: #fcad03;
   text-decoration: none;
-  white-space: nowrap;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 0 25px;
   border-radius: 20px;
@@ -68,7 +67,7 @@ li a {
   color: #fff;
 }
 
-.navbar p {
+body > header > nav > div.navbar-left > p:nth-child(2) {
   font-size: 1.5rem;
   font-family: "Bebas Neue", sans-serif;
   font-style: italic;
@@ -106,6 +105,15 @@ li a {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
 }
 
 /* Welcome Section */
@@ -982,9 +990,9 @@ footer {
 
   .nav-menu {
     position: absolute;
-    bottom: 10px; /* Position at the bottom of the header */
+    bottom: 10px;
     left: 50%;
-    transform: translateX(-50%); /* Center the links horizontally */
+    transform: translateX(-50%);
   }
 }
 
@@ -999,10 +1007,10 @@ footer {
   }
 
   .nav-branding {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
-  .navbar p {
+  body > header > nav > div.navbar-left > p:nth-child(2) {
     font-size: 1rem;
   }
 
@@ -1031,8 +1039,8 @@ footer {
   .hamburger {
     display: block;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px; /* Align to the bottom of the header */
+    right: 20px; /* Align to the right of the header */
   }
 
   .hamburger.active .bar:nth-child(2) {
