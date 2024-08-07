@@ -2,7 +2,7 @@ let currentSlide = 0;
 
 // Function to load carousel data from local JSON
 function loadCarouselData() {
-    fetch('../assets/js/localData.json')
+    fetch('./assets/js/localData.json')
         .then(response => response.json())
         .then(data => {
             const slides = data.slides;
@@ -21,8 +21,9 @@ function loadCarouselData() {
                 carouselInner.appendChild(slideElement);
             });
 
+            // Now that slides are added, start the carousel
             showSlide(currentSlide);
-            startAutoAdvance(); // Start the auto-advance after loading the slides
+            startAutoAdvance();
         })
         .catch(error => console.error('Error loading carousel data:', error));
 }

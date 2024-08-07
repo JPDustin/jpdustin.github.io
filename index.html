@@ -5,69 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Power Slate - Home</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <header id="header-image-bg">
-        <!-- Title and Slogan -->
-        <div id="header-title" class="text-center">
-            <h1>633 Teamsters Power Slate</h1>
-            <p>Bringing power back to the members</p>
-        </div>
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/platform.html">Our Platform</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/events.html">Information and Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/contact.html">Contact Us</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="/" class="nav-branding">633 Teamsters Power Slate</a>
+                <p>Bringing power back to the members</p>
             </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/pages/about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="/pages/platform.html" class="nav-link">Our Platform</a></li>
+                <li class="nav-item"><a href="/pages/news.html" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="/pages/events.html" class="nav-link">Information and Events</a></li>
+                <li class="nav-item"><a href="/pages/contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
     </header>
 
-    <section id="survey-banner" class="survey-banner">
-        <div class="container-custom">
-            <h2>Have Your Voice Heard!</h2>
-            <p>Your feedback is crucial for the future of our union. Take this quick survey to share your thoughts.</p>
-            <form action="/pages/survey.html">
-                <button type="submit" class="button btn-submit">Take the Survey</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="home" class="custom-section">
-        <div class="custom-container">
-            <h2>Welcome to the 633 Teamsters Power Slate Campaign Page</h2>
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome to the 633 Teamsters Power Slate Campaign Page</h1>
             <p>We are a dedicated group of IBT Local 633 Teamster stewards and members campaigning for the Executive
                 Board positions of the International Brotherhood of Teamsters Local 633.</p>
         </div>
         <div class="carousel">
-            <div class="carousel-inner" id="carousel-inner">
+            <div id="carousel-inner">
                 <!-- Dynamic content will be loaded here -->
             </div>
             <a class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</a>
@@ -75,46 +47,58 @@
         </div>
     </section>
 
-    <section id="upcoming-events">
-        <div class="custom-container">
+    <section class="events-section">
+        <div class="events-content">
             <h2>Upcoming Events</h2>
             <div class="event">
-                <h4>Monthly Union Meeting</h4>
-                <p>Join us for the monthly meetings at the Local 633 hall when they start up again this fall.</p>
+                <h3>Monthly Union Meeting</h3>
+                <p>The next monthly meeting is schedule for Labor Day weekend. The date of the meeting is <span>Sunday,
+                        September 1, 2024 at 10:00 a.m.</span> at the Union Hall in Manchester, NH.</p>
+                <p>This is the
+                    nomination meeting where candidate slates will be nominated for the election in October. We strongly
+                    encourage you
+                    to come to the next meeting, stand up, and be heard.</p>
             </div>
             <div class="event">
                 <h2>Campaigning Has Begun</h2>
                 <p>Keep an eye out for us at your place of employment as we make our way across the state to talk to you
                     and earn your support.</p>
-                <section id="latest-news">
-                    <div class="custom-container">
-                        <div class="latest-news">
-                            <h3><a href="/docs/content/news/article1.html">Power Slate Begins Their Run for Leadership
-                                    Positions Within Local 633's Union Hall</a></h3>
-                            <p>In an effort to bring dynamic and proactive leadership to Local 633's Union Hall, the 633
-                                Teamster Power Slate has launched their campaign for leadership positions...<a
-                                    href="./docs/content/news/article1.html">read more</a></p>
-                        </div>
-                    </div>
+                <section class="news-article">
+                    <h3><a href="/docs/content/news/article1.html">Power Slate Begins Their Run for Leadership Positions
+                            Within Local 633's Union Hall</a></h3>
+                    <p>In an effort to bring dynamic and proactive leadership to Local 633's Union Hall, the 633
+                        Teamster
+                        Power Slate has launched their campaign for leadership positions...<a
+                            href="./docs/content/news/article1.html">read more</a></p>
                 </section>
             </div>
         </div>
     </section>
 
-    <section id="volunteer">
-        <div class="custom-container">
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Have Your Voice Heard!</h2>
+            <p>Your feedback is crucial for the future of our union. Take this quick survey to share your thoughts.</p>
+            <form action="/pages/survey.html">
+                <button type="submit">Take the Survey</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="get-involved-section">
+        <div class="get-involved-content">
             <h2>Get Involved</h2>
             <p>We welcome volunteers to join us in our efforts. Fill out the form below to get involved.</p>
-            <form id="volunteerForm"
+            <form
                 action="https://script.google.com/macros/s/AKfycbzeK3NyOgLNKUYPrXKoiIfqsZlxJDNKSbi1wVW4kf5tq96V4zkl4q5R1BRjJtERQ3pidA/exec"
-                method="post">
+                method="post" id="volunteerForm">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="btn-submit">Submit</button>
+                <button type="submit">Submit</button>
             </form>
             <div id="formConfirmation" style="display:none;">Thank you for your submission!</div>
             <p>For more ways to get involved, visit our <a href="pages/get-involved.html">Get Involved</a> page.</p>
@@ -122,92 +106,15 @@
     </section>
 
     <footer>
-        <div class="custom-container">
+        <div class="footer-content">
             <p>&copy; 2024 Power Slate. All rights reserved.</p>
             <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i
                         class="fab fa-facebook"></i> Facebook</a></p>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.getElementById('volunteerForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent default form submission
-
-            var form = event.target;
-            var data = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                mode: 'no-cors'
-            }).then(function () {
-                // Hide the form and show the confirmation message
-                form.style.display = 'none';
-                document.getElementById('formConfirmation').style.display = 'block';
-            }).catch(function (error) {
-                console.error('Error!', error.message);
-            });
-        });
-
-        let currentSlide = 0;
-
-        // Function to load carousel data from local JSON
-        function loadCarouselData() {
-            fetch('../assets/js/localData.json')
-                .then(response => response.json())
-                .then(data => {
-                    const slides = data.slides;
-                    const carouselInner = document.getElementById('carousel-inner');
-
-                    slides.forEach((slide, index) => {
-                        const slideElement = document.createElement('div');
-                        slideElement.className = `carousel-item${index === 0 ? ' active' : ''}`;
-                        slideElement.innerHTML = `
-                            <img src="${slide.image}" alt="${slide.title}">
-                            <div class="carousel-caption">
-                                <h3>${slide.link ? `<a href="${slide.link}" class="carousel-link">${slide.title}</a>` : slide.title}</h3>
-                                <p>${slide.description}</p>
-                            </div>
-                        `;
-                        carouselInner.appendChild(slideElement);
-                    });
-
-                    showSlide(currentSlide);
-                    startAutoAdvance(); // Start the auto-advance after loading the slides
-                })
-                .catch(error => console.error('Error loading carousel data:', error));
-        }
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-item');
-            slides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-        }
-
-        function moveSlide(step) {
-            const slides = document.querySelectorAll('.carousel-item');
-            currentSlide = (currentSlide + step + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // Function to start auto-advancing the slides
-        function startAutoAdvance() {
-            setInterval(() => {
-                moveSlide(1); // Move to the next slide
-            }, 7000); // Change slides every 7 seconds (7000 milliseconds)
-        }
-
-        // Initialize the carousel by loading data
-        loadCarouselData();
-    </script>
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/menu.js"></script>
 </body>
 
 </html>
