@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -15,6 +21,10 @@ header {
   color: #ffffff;
   padding: 10px 0;
   height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 li {
@@ -31,7 +41,7 @@ li a {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
-  position: relative;
+  flex-grow: 1;
 }
 
 .navbar-left {
@@ -74,6 +84,8 @@ li a {
   display: flex;
   gap: 20px;
   list-style-type: none;
+  justify-content: center; /* Center the links */
+  position: relative;
 }
 
 .nav-item a {
@@ -92,16 +104,8 @@ li a {
   display: none;
   cursor: pointer;
   position: absolute;
-  right: 24px;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  bottom: 20px;
+  right: 20px;
 }
 
 /* Welcome Section */
@@ -114,18 +118,19 @@ li a {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 20px;
 }
 
 .welcome-content h1 {
   color: #003399;
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin: 0;
   padding: 0;
 }
 
 .welcome-content p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 20px 0;
 }
 
@@ -237,17 +242,18 @@ li a {
 .events-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .events-section h2 {
   color: #003399;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .events-section h3 {
   color: #003399;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -255,13 +261,13 @@ li a {
   color: firebrick;
   font-weight: 700;
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .news-article h3 a {
   color: #003399;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .news-article h3 a:hover {
@@ -271,7 +277,7 @@ li a {
 
 .news-article a {
   color: #003399;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -285,20 +291,22 @@ li a {
 .cta-section {
   border: 2px solid #003399;
   padding: 20px 0;
-  width: 50%;
-  margin: 25px 0 0 25%;
+  width: 80%;
+  margin: 25px auto;
   border-radius: 5px;
+  text-align: center;
 }
 
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 20px;
 }
 
 .cta-content h2 {
   color: #003399;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -332,11 +340,12 @@ li a {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 0 20px;
 }
 
 .get-involved-content h2 {
   color: #003399;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -963,7 +972,22 @@ footer {
   color: #ffffff;
 }
 
-/* Media Queries */
+/* Responsive Media Queries */
+@media (min-width: 769px) {
+  .navbar {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom of the header */
+    left: 50%;
+    transform: translateX(-50%); /* Center the links horizontally */
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -1006,6 +1030,9 @@ footer {
 
   .hamburger {
     display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -1022,25 +1049,5 @@ footer {
 
   .nav-item {
     margin: 16px 0;
-  }
-
-  .welcome-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .events-content {
-    padding: 0 20px;
-  }
-
-  .cta-section {
-    width: 90%;
-  }
-
-  .get-involved-section {
-    padding: 20px 0;
-  }
-
-  .get-involved-content {
-    padding: 0 20px;
   }
 }
