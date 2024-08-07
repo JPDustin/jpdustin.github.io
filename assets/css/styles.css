@@ -1058,4 +1058,26 @@ footer {
   .nav-item {
     margin: 16px 0;
   }
+  
+  .carousel-caption {
+    padding: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px); /* Ensure the overlay doesn't overflow the carousel */
+    font-size: 0.875rem; /* Slightly reduce the font size */
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem; /* Adjust title size for mobile */
+  }
+
+  .carousel-caption p {
+    font-size: 0.875rem; /* Adjust text size for mobile */
+    margin: 5px 0 0;
+  }
+
+  .carousel-link {
+    font-size: 0.875rem; /* Adjust link size for mobile */
+  }
 }
