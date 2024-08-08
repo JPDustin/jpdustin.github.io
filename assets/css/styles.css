@@ -218,6 +218,26 @@ body > header > nav > div.navbar-left > p:nth-child(2) {
   text-decoration: underline;
 }
 
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
 /* Events Section */
 .events-section {
   background-color: #f4f4f4;
@@ -1038,13 +1058,15 @@ footer {
   .nav-item {
     margin: 16px 0;
   }
-  
+
   .carousel-caption {
     padding: 10px;
     bottom: 10px;
     left: 10px;
     right: 10px;
-    max-width: calc(100% - 20px); /* Ensure the overlay doesn't overflow the carousel */
+    max-width: calc(
+      100% - 20px
+    ); /* Ensure the overlay doesn't overflow the carousel */
     font-size: 0.875rem; /* Slightly reduce the font size */
   }
 
