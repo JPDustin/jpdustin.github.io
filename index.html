@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Power Slate - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -49,7 +50,7 @@
 
     <section class="events-section">
         <div class="events-content">
-            <h2>Upcoming Events</h2>
+            <h2>News &amp; Events</h2>
             <div class="event">
                 <h3>Union Meeting</h3>
                 <p>The next meeting is scheduled for Labor Day weekend. The date of the meeting is <span>Sunday,
@@ -60,17 +61,17 @@
                     to come to the next meeting, stand up, and be heard.</p>
             </div>
             <div class="event">
-                <h2>Campaigning Has Begun</h2>
+                <h3>Campaigning Has Begun</h3>
                 <p>Keep an eye out for us at your place of employment as we make our way across the state to talk to you
                     and earn your support.</p>
-                <section class="news-article">
+                <div class="news-article">
                     <h3><a href="/docs/content/news/article1.html">Power Slate Begins Their Run for Leadership Positions
                             Within Local 633's Union Hall</a></h3>
                     <p>In an effort to bring dynamic and proactive leadership to Local 633's Union Hall, the 633
                         Teamster
                         Power Slate has launched their campaign for leadership positions...<a
                             href="./docs/content/news/article1.html">read more</a></p>
-                </section>
+                </div>
             </div>
         </div>
     </section>
@@ -92,24 +93,33 @@
             <form
                 action="https://script.google.com/macros/s/AKfycbzeK3NyOgLNKUYPrXKoiIfqsZlxJDNKSbi1wVW4kf5tq96V4zkl4q5R1BRjJtERQ3pidA/exec"
                 method="post" id="volunteerForm">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
                 <button type="submit">Submit</button>
             </form>
             <div id="formConfirmation" style="display:none;">Thank you for your submission!</div>
-            <p>For more ways to get involved, visit our <a href="pages/get-involved.html">Get Involved</a> page.</p>
+            <p>For more ways to get involved, visit our <a class="get-involved-link" href="pages/get-involved.html">Get
+                    Involved</a> page.</p>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Power Slate. All rights reserved.</p>
-            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i
-                        class="fab fa-facebook"></i> Facebook</a></p>
+            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"
+                    class="footer__social-link">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a></p>
         </div>
     </footer>
 

@@ -7,6 +7,7 @@
     <title>Power Slate - Contact Us</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
@@ -33,36 +34,41 @@
         </nav>
     </header>
 
-    <section class="contact-section">
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <p>We'd love to hear from you. Reach out to us with any questions or comments.</p>
+    <section class="contact">
+        <div class="contact__header">
+            <h2 class="contact__title">Contact Us</h2>
+            <p class="contact__subtitle">We'd love to hear from you. Reach out to us with any questions or comments.</p>
+        </div>
+
+        <div class="contact__section">
             <form
                 action="https://script.google.com/macros/s/AKfycbwIt8_0Zo9CYon0YOrQATd6MsnW73oUOLbxt2DlqYlPCiyBQMwfgZWhOo0ENk7zCUIB/exec"
-                method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                method="post" class="contact__form">
+                <div class="contact__form-group">
+                    <label for="name" class="contact__label">Name:</label>
+                    <input type="text" id="name" name="name" required class="contact__input">
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contact__form-group">
+                    <label for="email" class="contact__label">Email:</label>
+                    <input type="email" id="email" name="email" required class="contact__input">
                 </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                <div class="contact__form-group">
+                    <label for="message" class="contact__label">Message:</label>
+                    <textarea id="message" name="message" rows="4" required class="contact__textarea"></textarea>
                 </div>
-                <button type="submit" class="submit-button">Submit</button>
+                <button type="submit" class="contact__submit-button">Submit</button>
             </form>
-            <div class="submission-message" style="display:none;">Thank you for your submission!</div>
+            <div class="contact__submission-message" style="display:none;">Thank you for your submission!</div>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Power Slate. All rights reserved.</p>
-            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i
-                        class="fab fa-facebook"></i> Facebook</a></p>
+            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"
+                    class="footer__social-link">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a></p>
         </div>
     </footer>
 

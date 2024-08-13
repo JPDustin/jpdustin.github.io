@@ -7,6 +7,7 @@
     <title>Power Slate - Get involved</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
@@ -33,50 +34,62 @@
         </nav>
     </header>
 
-    <section class="get-involved-section">
-        <div class="get-involved-container">
-            <h2>Get Involved</h2>
-            <p>There are many ways you can get involved and support our campaign:</p>
-
-            <div class="get-involved-volunteer">
-                <h3>Volunteer</h3>
-                <p>We need volunteers to help with various tasks such as canvassing, phone banking, event setup, and
-                    more. Fill out the form below to let us know how you can help.</p>
-                <form
-                    action="https://script.google.com/macros/s/AKfycbzeK3NyOgLNKUYPrXKoiIfqsZlxJDNKSbi1wVW4kf5tq96V4zkl4q5R1BRjJtERQ3pidA/exec"
-                    method="post" class="volunteer-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
-                <div class="submission-message" style="display:none;">Thank you for your submission!</div>
+    <section class="get-involved">
+        <div class="get-involved__container">
+            <div class="get-involved__header">
+                <h2 class="get-involved__title">Get Involved</h2>
+                <p class="get-involved__subtitle">There are many ways you can get involved and support our campaign:</p>
             </div>
 
-            <div class="get-involved-donate">
-                <h3>Donate</h3>
-                <p>Your donations are crucial to our campaign. <a href="/pages/contact.html">Contact us</a> to request
-                    information on how you can donate.</p>
-            </div>
+            <div class="get-involved__content">
+                <div class="get-involved__item">
+                    <h3 class="get-involved__item-title">Volunteer</h3>
+                    <p class="get-involved__item-text">We need volunteers to help with various tasks such as canvassing,
+                        event setup, and more. Fill out the form below to let us know how you can help.
+                    </p>
+                    <form
+                        action="https://script.google.com/macros/s/AKfycbzeK3NyOgLNKUYPrXKoiIfqsZlxJDNKSbi1wVW4kf5tq96V4zkl4q5R1BRjJtERQ3pidA/exec"
+                        method="post" class="get-involved__form">
+                        <div class="form-group">
+                            <label for="name" class="get-involved__label">Name</label>
+                            <input type="text" id="name" name="name" class="get-involved__input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="get-involved__label">Email</label>
+                            <input type="email" id="email" name="email" class="get-involved__input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="get-involved__label">Message</label>
+                            <textarea id="message" name="message" rows="4" class="get-involved__textarea"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="get-involved__submit-button">Submit</button>
+                    </form>
+                    <div class="get-involved__submission-message" style="display:none;">Thank you for your submission!
+                    </div>
+                </div>
 
-            <div class="get-involved-spread">
-                <h3>Spread the Word</h3>
-                <p>Help us spread the word by sharing our campaign on social media and talking to your friends and
-                    family about why you support the Power Slate.</p>
-                <p>Follow us on social media:</p>
-                <ul class="social-links">
-                    <li><a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i
-                                class="fab fa-facebook"></i> Facebook</a></li>
-                </ul>
+                <div class="get-involved__item">
+                    <h3 class="get-involved__item-title">Donate</h3>
+                    <p class="get-involved__item-text">Your donations are crucial to our campaign. <a
+                            href="/pages/contact.html" class="get-involved__link">Contact us</a> to request information
+                        on how you can donate.</p>
+                </div>
+
+                <div class="get-involved__item">
+                    <h3 class="get-involved__item-title">Spread the Word</h3>
+                    <p class="get-involved__item-text">Help us spread the word by sharing our campaign on social media
+                        and talking to your friends and family about why you support the Power Slate.</p>
+                    <p class="get-involved__item-text">Follow us on social media:</p>
+                    <ul class="get-involved__social-links">
+                        <li>
+                            <a href="https://www.facebook.com/groups/330972783038758" target="_blank"
+                                class="get-involved__social-link">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -84,8 +97,10 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Power Slate. All rights reserved.</p>
-            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"><i
-                        class="fab fa-facebook"></i> Facebook</a></p>
+            <p>Follow us on <a href="https://www.facebook.com/groups/330972783038758" target="_blank"
+                    class="footer__social-link">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a></p>
         </div>
     </footer>
 
