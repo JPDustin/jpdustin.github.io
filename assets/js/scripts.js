@@ -58,7 +58,7 @@ loadCarouselData();
 // JavaScript for "Return to Top" functionality
 window.addEventListener('scroll', function () {
     var returnToTop = document.getElementById('return-to-top');
-    if (window.scrollY > 200) { // Show widget after scrolling down 200px
+    if (window.scrollY > 200) { // Adjust this number to control when the button appears
         returnToTop.style.display = 'block';
     } else {
         returnToTop.style.display = 'none';
@@ -68,6 +68,6 @@ window.addEventListener('scroll', function () {
 document.getElementById('return-to-top').addEventListener('click', function () {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Smooth scroll to top
+        behavior: 'smooth'
     });
 });
