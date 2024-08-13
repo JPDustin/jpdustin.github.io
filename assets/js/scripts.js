@@ -54,3 +54,20 @@ function startAutoAdvance() {
 
 // Initialize the carousel by loading data
 loadCarouselData();
+
+// JavaScript for "Return to Top" functionality
+window.addEventListener('scroll', function () {
+    var returnToTop = document.getElementById('return-to-top');
+    if (window.scrollY > 200) { // Show widget after scrolling down 200px
+        returnToTop.style.display = 'block';
+    } else {
+        returnToTop.style.display = 'none';
+    }
+});
+
+document.getElementById('return-to-top').addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll to top
+    });
+});
