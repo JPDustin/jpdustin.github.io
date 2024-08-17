@@ -575,6 +575,19 @@ body > header > nav > div.navbar-left > p:nth-child(2) {
   margin-bottom: 20px;
 }
 
+.quote {
+  font-size: 1.2rem;
+  color: #666666;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 4px solid #003399;
+}
+
+.quote span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 /* Mission Section */
 .mission {
   margin: 20px auto;
