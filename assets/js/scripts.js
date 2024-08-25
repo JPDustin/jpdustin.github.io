@@ -71,3 +71,34 @@ document.getElementById('return-to-top').addEventListener('click', function () {
         behavior: 'smooth'
     });
 });
+
+// Get the modal
+var modal = document.getElementById("campaignModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("modal-close")[0];
+
+// Get the button that closes the modal
+var closeButton = document.getElementById("closeModalButton");
+
+// Open the modal when the page loads
+window.onload = function () {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks on the button, close the modal
+closeButton.onclick = function () {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
