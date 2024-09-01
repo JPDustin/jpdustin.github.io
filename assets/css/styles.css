@@ -185,9 +185,9 @@ body > header > nav > div.navbar-left > p:nth-child(2) {
 }
 
 .carousel-inner {
+  position: relative;
   display: flex;
   transition: transform 0.5s ease;
-  position: relative;
 }
 
 .carousel-item {
@@ -211,6 +211,31 @@ body > header > nav > div.navbar-left > p:nth-child(2) {
   border-radius: 5px;
   object-fit: cover;
   aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
 }
 
 /* Overlay for Title, Description, and Link */
@@ -251,26 +276,6 @@ body > header > nav > div.navbar-left > p:nth-child(2) {
 .carousel-link:hover {
   color: #fff;
   text-decoration: underline;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 20;
-}
-
-.carousel-control.prev {
-  left: 10px;
-}
-
-.carousel-control.next {
-  right: 10px;
 }
 
 /* Events Section */
@@ -1400,29 +1405,75 @@ footer {
     margin: 16px 0;
   }
 
+  .carousel {
+    max-width: 100%;
+  }
+
+  .carousel-control {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 15px;
+    margin-top: -75px;
+  }
+
+  .carousel-control.prev {
+    left: 5px;
+  }
+
+  .carousel-control.next {
+    right: 5px;
+  }
+
+  /* Adjust caption positioning for smaller screens */
   .carousel-caption {
-    padding: 10px;
-    bottom: 10px;
     left: 10px;
     right: 10px;
-    max-width: calc(
-      100% - 20px
-    ); /* Ensure the overlay doesn't overflow the carousel */
-    font-size: 0.875rem; /* Slightly reduce the font size */
+    bottom: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Overlay for Title, Description, and Link */
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 90%;
+    z-index: 10;
   }
 
   .carousel-caption h3 {
-    font-size: 1.2rem; /* Adjust title size for mobile */
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: #fcad03;
   }
 
   .carousel-caption p {
-    font-size: 0.875rem; /* Adjust text size for mobile */
-    margin: 5px 0 0;
+    margin: 10px 0 0;
+    font-size: 1rem;
+    font-style: italic;
   }
 
   .carousel-link {
-    font-size: 0.875rem; /* Adjust link size for mobile */
+    color: #fcad03;
+    text-decoration: underline;
+    z-index: 20;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
   }
+
+  .carousel-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
   .modal-content {
     width: 95%; /* Full width with slight margin */
     padding: 20px 15px; /* Reduced padding for smaller screens */

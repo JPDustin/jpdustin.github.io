@@ -17,11 +17,13 @@ function loadCarouselData() {
                         <h3>${slide.link ? `<a href="${slide.link}" class="carousel-link">${slide.title}</a>` : slide.title}</h3>
                         <p>${slide.description}</p>
                     </div>
+                    <a class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</a>
+                    <a class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
                 `;
                 carouselInner.appendChild(slideElement);
             });
 
-            // Now that slides are added, start the carousel
+            // Start the carousel
             showSlide(currentSlide);
             startAutoAdvance();
         })
@@ -31,11 +33,7 @@ function loadCarouselData() {
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-item');
     slides.forEach((slide, i) => {
-        if (i === index) {
-            slide.classList.add('active');
-        } else {
-            slide.classList.remove('active');
-        }
+        slide.classList.toggle('active', i === index);
     });
 }
 
@@ -54,6 +52,7 @@ function startAutoAdvance() {
 
 // Initialize the carousel by loading data
 loadCarouselData();
+
 
 // JavaScript for "Return to Top" functionality
 window.addEventListener('scroll', function () {
