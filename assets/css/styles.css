@@ -517,11 +517,6 @@ body > header > nav > div.navbar-left > p:nth-child(2) {
   margin: 20px;
 }
 
-.dropdown h2 {
-  color: #003399;
-  margin-bottom: 20px;
-}
-
 .dropbtn {
   background-color: #003399;
   color: white;
